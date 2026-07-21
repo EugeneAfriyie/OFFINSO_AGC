@@ -1,5 +1,6 @@
 import { UnderConstructionPlaceholder } from "@/components/layout/UnderConstructionPlaceholder";
 
-export default function MinistryDetailPage({ params }: { params: { slug: string } }) {
-  return <UnderConstructionPlaceholder pageTitle={`Ministry: ${params.slug}`} routePath={`/ministries/${params.slug}`} />;
+export default async function MinistryDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  return <UnderConstructionPlaceholder pageTitle={`Ministry: ${slug}`} routePath={`/ministries/${slug}`} />;
 }
