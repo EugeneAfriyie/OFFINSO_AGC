@@ -45,7 +45,7 @@ export default function EventsPage() {
       venue: "Main Cathedral Sanctuary, Offinso Toll Booth",
       speaker: siteConfig.seniorPastor + " & Guest Evangelist",
       featured: true,
-      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1200&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810626/4e872129-04b8-42d1-8588-8b2f5c7830e1.png",
       description: "Join us for 7 powerful nights of Pentecostal worship, prophetic deliverance, healing, and spiritual empowerment. Experience the unadulterated Word of God and supernatural breakthrough.",
     },
     {
@@ -57,7 +57,7 @@ export default function EventsPage() {
       venue: "Main Sanctuary",
       speaker: siteConfig.seniorPastor,
       featured: false,
-      image: "https://images.unsplash.com/photo-1519834785169-98be25ec3f84?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810596/2680fa0f-de4a-4e2a-b35c-e137a3a94196.png",
       description: "An all-night prayer vigil saturated in fervent worship, intercession for Offinso and Ghana, and baptism of the Holy Spirit.",
     },
     {
@@ -69,7 +69,7 @@ export default function EventsPage() {
       venue: "Youth Chapel",
       speaker: "Pastor Emmanuel Osei",
       featured: false,
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810596/2680fa0f-de4a-4e2a-b35c-e137a3a94196.png",
       description: "Equipping teenagers, high school graduates, and university students in Offinso for campus evangelism and godly leadership.",
     },
     {
@@ -81,7 +81,7 @@ export default function EventsPage() {
       venue: "Main Sanctuary",
       speaker: "Deaconess Grace Appiah",
       featured: false,
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784812116/b1492e5c-f580-4e74-a529-dd5751aa8cc8.png",
       description: "Special empowerment workshop for women and mothers on nurturing Christian homes, business growth, and spiritual strength.",
     },
     {
@@ -93,7 +93,7 @@ export default function EventsPage() {
       venue: "Sanctuary Annex",
       speaker: "Deacon Kwadwo Mensah",
       featured: false,
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784812272/44b8e9e6-91d4-4fec-bb73-af0c5c45e3fb.png",
       description: "Brotherhood breakfast fellowship for men and fathers focusing on integrity, financial stewardship, and spiritual accountability.",
     },
     {
@@ -117,7 +117,7 @@ export default function EventsPage() {
       venue: "Children Chapel Grounds",
       speaker: "Children Ministry Directors",
       featured: false,
-      image: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784811349/ab5fef61-bf19-4026-a773-a365dd1e3a81.png",
       description: "A fun-filled morning of Bible games, sword drills, puppet shows, and gospel learning for children aged 3 to 12.",
     },
     {
@@ -129,7 +129,7 @@ export default function EventsPage() {
       venue: "Offinso Town Park",
       speaker: siteConfig.seniorPastor,
       featured: false,
-      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810978/3602393e-0485-4a7c-bddd-627e59827887.png",
       description: "Open-air evangelistic revival crusade bringing salvation, deliverance from bondage, and divine healing to Offinso.",
     },
     {
@@ -153,7 +153,7 @@ export default function EventsPage() {
       venue: "Main Sanctuary",
       speaker: "Guest Business Executives",
       featured: false,
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784811455/13c63027-214d-4d56-80f4-95bdb654736c.png",
       description: "Empowering young professionals with marketplace strategies, career mentorship, and biblical principles of wealth creation.",
     },
     {
@@ -165,7 +165,7 @@ export default function EventsPage() {
       venue: "Main Sanctuary",
       speaker: "Sanctuary Choir & Guests",
       featured: false,
-      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784559187/326fa0fb-f0b5-4856-aaf8-82bff6ea5e05.png",
       description: "A night of exuberant praise, choir ministrations, and corporate thanksgiving celebrating God's faithfulness throughout 2026.",
     },
     {
@@ -177,7 +177,7 @@ export default function EventsPage() {
       venue: "Cathedral Main Sanctuary",
       speaker: siteConfig.seniorPastor,
       featured: false,
-      image: "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810596/2680fa0f-de4a-4e2a-b35c-e137a3a94196.png",
       description: "Cross over into the New Year under open heavens with prophetic declarations, midnight communion, and anointed worship.",
     }
   ];

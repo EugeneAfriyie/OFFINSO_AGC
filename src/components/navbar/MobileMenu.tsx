@@ -94,7 +94,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             <button
               onClick={() => {
                 onClose();
-                openModal("prayer");
+                openModal("prayer-request");
               }}
               className="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left space-y-1 hover:bg-slate-100 transition-colors"
             >

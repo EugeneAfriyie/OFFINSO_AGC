@@ -160,7 +160,7 @@ export default function MinistriesPage() {
             <div className="lg:col-span-8 bg-[#050B14] text-white rounded-3xl border-2 border-primary-500/40 p-8 sm:p-10 shadow-2xl relative overflow-hidden flex flex-col justify-between group">
               <div className="absolute inset-0 z-0 opacity-30 group-hover:opacity-40 transition-opacity">
                 <Image
-                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80"
+                  src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784562978/a0d09b69-8f99-46c2-b8f5-3dd6aca68b92.png"
                   alt="Kingdom Youth Ministry"
                   fill
                   className="object-cover"

@@ -15,20 +15,21 @@ import {
   Video, 
   Headphones, 
   ArrowRight,
-  X,
   Volume2,
   VolumeX,
   Tv,
   Rss,
   Flame,
   Zap,
-  Maximize2,
   BookOpen,
   FileText,
   Bookmark,
   Quote,
   Loader2,
-  ChevronDown
+  ChevronDown,
+  Facebook,
+  X,
+  Maximize2
 } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { useModal } from "@/contexts/ModalContext";
@@ -45,7 +46,7 @@ export default function SermonsPage() {
     title: string;
     speaker: string;
     series: string;
-    youtubeUrl: string;
+    videoUrl: string;
     description: string;
     badge?: string;
   } | null>(null);
@@ -73,17 +74,22 @@ export default function SermonsPage() {
     },
   ];
 
+  // Convert direct Facebook reel URL to embeddable plugin URL with vertical dimensions for mobile support
+  const fbEmbed = (reelUrl: string) =>
+    `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(reelUrl)}&show_text=false&width=314&height=560&t=0`;
+
   const sermons = [
     {
       id: "sermon-1",
-      title: "Prophetic Decrees & Kingdom Breakthrough for 2026",
+      title: "Prophetic Decrees & Kingdom Breakthrough",
       series: "Prophetic Unction Series",
       speaker: siteConfig.seniorPastor,
-      date: "July 19, 2026",
+      date: "Recent Service",
       badge: "Prophetic Message",
       category: "prophetic",
       featured: true,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/1355094429405934"),
+      watchUrl: "https://www.facebook.com/reel/1355094429405934",
       description: "Senior Pastor Collins Ababio releases prophetic declarations of divine favor, territorial dominion, and supernatural breakthrough over your family and career.",
     },
     {
@@ -91,11 +97,12 @@ export default function SermonsPage() {
       title: "Spiritual Warfare & Overcoming Territorial Powers",
       series: "Deliverance & Anointing",
       speaker: siteConfig.seniorPastor,
-      date: "July 12, 2026",
+      date: "Recent Service",
       badge: "Full Service",
       category: "prophetic",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/2295098140898280"),
+      watchUrl: "https://www.facebook.com/reel/2295098140898280",
       description: "Anointed prophetic teaching on taking authority over spiritual darkness, pulling down strongholds, and enforcing your covenant rights in Christ.",
     },
     {
@@ -103,11 +110,12 @@ export default function SermonsPage() {
       title: "The Power of Fervent, Spirit-Led Prayer",
       series: "Upper Room Revival",
       speaker: siteConfig.seniorPastor,
-      date: "July 05, 2026",
+      date: "Recent Service",
       badge: "Revival Broadcast",
       category: "prayer",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/1622623529464063"),
+      watchUrl: "https://www.facebook.com/reel/1622623529464063",
       description: "Anointed teaching on Pentecostal prayer, travail in the Spirit, and how effective prayer opens doors of revival across Offinso and Kumasi.",
     },
     {
@@ -115,35 +123,38 @@ export default function SermonsPage() {
       title: "Prophetic Alignment & Walking in Divine Timing",
       series: "Prophetic Unction Series",
       speaker: siteConfig.seniorPastor,
-      date: "June 28, 2026",
+      date: "Recent Service",
       badge: "Sunday Preaching",
       category: "prophetic",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/1346709627439092"),
+      watchUrl: "https://www.facebook.com/reel/1346709627439092",
       description: "Discover how to discern spiritual seasons, align with God's prophetic timetable, and step into doors opened by the Holy Ghost.",
     },
     {
       id: "sermon-5",
-      title: "Building Godly Families & Marriages",
-      series: "Kingdom Family Life",
-      speaker: "Deaconess Grace Appiah",
-      date: "June 21, 2026",
-      badge: "Family Session",
-      category: "family",
+      title: "Walking in Faith & Kingdom Authority",
+      series: "Faith & Victory",
+      speaker: siteConfig.seniorPastor,
+      date: "Recent Service",
+      badge: "Sunday Service",
+      category: "faith",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Practical wisdom for husbands, wives, and parents on raising children in the fear of the Lord and sustaining marital harmony.",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/968993329510600"),
+      watchUrl: "https://www.facebook.com/reel/968993329510600",
+      description: "Practical wisdom on building an unshakable faith foundation and walking in the full authority Christ has given every believer.",
     },
     {
       id: "sermon-6",
       title: "Financial Stewardship & Covenant Tithing",
       series: "Kingdom Prosperity",
       speaker: siteConfig.seniorPastor,
-      date: "June 14, 2026",
+      date: "Recent Service",
       badge: "Full Sermon",
       category: "faith",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/2145422576024679"),
+      watchUrl: "https://www.facebook.com/reel/2145422576024679",
       description: "Discovering biblical principles of kingdom wealth creation, faithful tithing, generous giving, and breaking financial stagnation.",
     },
     {
@@ -151,23 +162,25 @@ export default function SermonsPage() {
       title: "Unshakable Faith in Times of Adversity",
       series: "Faith & Victory",
       speaker: siteConfig.seniorPastor,
-      date: "June 07, 2026",
+      date: "Recent Service",
       badge: "Sunday Service",
       category: "faith",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/4655469971364315"),
+      watchUrl: "https://www.facebook.com/reel/4655469971364315",
       description: "How to stand firm in faith when trials come, trusting in God's unyielding promises and eternal faithfulness.",
     },
     {
       id: "sermon-8",
       title: "Anointed Praise & Breaking Heavy Yokes",
       series: "Worship & Glory",
-      speaker: "Worship Leader Samuel Mensah",
-      date: "May 31, 2026",
+      speaker: siteConfig.seniorPastor,
+      date: "Recent Service",
       badge: "Worship Session",
       category: "prayer",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/1550069946855271"),
+      watchUrl: "https://www.facebook.com/reel/1550069946855271",
       description: "Experience the power of high praise and thanksgiving as a weapon of warfare that disarms spiritual oppression.",
     },
     {
@@ -175,11 +188,12 @@ export default function SermonsPage() {
       title: "Walking in the Gifts of the Holy Spirit",
       series: "Pentecostal Power",
       speaker: siteConfig.seniorPastor,
-      date: "May 24, 2026",
+      date: "Recent Service",
       badge: "Holy Ghost Night",
       category: "prophetic",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/1194756199406655"),
+      watchUrl: "https://www.facebook.com/reel/1194756199406655",
       description: "Understanding and exercising the 9 spiritual gifts for the edification of the church and demonstration of God's power.",
     },
     {
@@ -187,73 +201,42 @@ export default function SermonsPage() {
       title: "The Heart of a True Kingdom Steward",
       series: "Discipleship Series",
       speaker: siteConfig.seniorPastor,
-      date: "May 17, 2026",
+      date: "Recent Service",
       badge: "Discipleship Class",
       category: "faith",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/2178890102897783"),
+      watchUrl: "https://www.facebook.com/reel/2178890102897783",
       description: "Cultivating humility, integrity, and faithful service in your local church and daily professional life.",
     },
     {
       id: "sermon-11",
-      title: "Overcoming Fear Through God's Perfect Love",
-      series: "Inner Healing Series",
-      speaker: "Deaconess Grace Appiah",
-      date: "May 10, 2026",
-      badge: "Midweek Teaching",
-      category: "family",
+      title: "Dominion Over Satanic Strongholds",
+      series: "Deliverance & Anointing",
+      speaker: siteConfig.seniorPastor,
+      date: "Recent Service",
+      badge: "Prophetic Night",
+      category: "prophetic",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Replacing anxiety and fear with divine confidence and peace through the revelatory knowledge of God's love.",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/1601945304244330"),
+      watchUrl: "https://www.facebook.com/reel/1601945304244330",
+      gradient: "from-purple-900 via-fuchsia-900 to-slate-950",
+      description: "Enforcing the victory of the cross over ancestral curses, demonic oppression, and recurring family stagnation through the power of God's Word.",
     },
     {
       id: "sermon-12",
       title: "Harvest of Miracles & Healing Service",
-      series: "Miracle Crusade 2026",
+      series: "Miracle Crusade",
       speaker: siteConfig.seniorPastor,
-      date: "May 03, 2026",
+      date: "Recent Service",
       badge: "Crusade Session",
       category: "prophetic",
       featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Anointed healing service demonstrating Jesus Christ's power to heal sicknesses, restore bodies, and perform miracles.",
+      videoUrl: fbEmbed("https://www.facebook.com/reel/448155059928527"),
+      watchUrl: "https://www.facebook.com/reel/448155059928527",
+      gradient: "from-blue-900 via-indigo-900 to-slate-950",
+      description: "Anointed healing service demonstrating Jesus Christ's power to heal sicknesses, restore bodies, and perform miracles today.",
     },
-    {
-      id: "sermon-13",
-      title: "Supernatural Provision & Open Heavens",
-      series: "Kingdom Prosperity",
-      speaker: siteConfig.seniorPastor,
-      date: "April 26, 2026",
-      badge: "Sunday Message",
-      category: "faith",
-      featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Stepping into God's supernatural supply where lack is eradicated and abundance flows into your family and ministry.",
-    },
-    {
-      id: "sermon-14",
-      title: "Rebuilding the Altar of Family Worship",
-      series: "Kingdom Family Life",
-      speaker: siteConfig.seniorPastor,
-      date: "April 19, 2026",
-      badge: "Family Worship",
-      category: "family",
-      featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "How to establish daily family altars, pray together as a household, and anchor your children in biblical truth.",
-    },
-    {
-      id: "sermon-15",
-      title: "Dominion Power Over Satanic Strongholds",
-      series: "Deliverance & Anointing",
-      speaker: siteConfig.seniorPastor,
-      date: "April 12, 2026",
-      badge: "Prophetic Night",
-      category: "prophetic",
-      featured: false,
-      youtubeUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      description: "Enforcing the victory of the cross over ancestral curses, demonic oppression, and recurring family stagnations.",
-    }
   ];
 
   const featuredSermon = sermons.find(s => s.featured) || sermons[0];
@@ -349,15 +332,29 @@ export default function SermonsPage() {
                   </span>
                 </div>
 
-                <div className="relative aspect-[16/9] rounded-xl overflow-hidden border border-white/20 shadow-md">
-                  <iframe
-                    src={featuredSermon.youtubeUrl}
-                    title={featuredSermon.title}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
+                {/* Featured sermon thumbnail with actual video background */}
+                <button
+                  onClick={() => setSelectedVideo(featuredSermon)}
+                  className="relative aspect-[16/9] rounded-xl overflow-hidden border border-white/20 shadow-md group/thumb flex items-center justify-center block w-full bg-slate-950"
+                >
+                  <div className="absolute inset-0 pointer-events-none opacity-90 transition-opacity group-hover/thumb:opacity-60 flex items-center justify-center">
+                    <iframe
+                      src={featuredSermon.videoUrl}
+                      title={featuredSermon.title}
+                      className="w-full h-full md:w-[314px] md:h-[560px]"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      scrolling="no"
+                      frameBorder="0"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="relative z-10 flex flex-col items-center justify-center gap-2 drop-shadow-xl">
+                    <div className="w-14 h-14 rounded-full bg-black/50 border-2 border-white/40 flex items-center justify-center group-hover/thumb:scale-110 group-hover/thumb:bg-black/70 transition-all shadow-2xl backdrop-blur-md">
+                      <Play className="w-6 h-6 fill-white text-white ml-1" />
+                    </div>
+                    <span className="text-white text-[10px] font-black uppercase tracking-wider drop-shadow-md bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm">Play Video</span>
+                  </div>
+                </button>
 
                 <div className="space-y-0.5 text-left">
                   <div className="text-[11px] font-bold text-amber-300">
@@ -455,8 +452,8 @@ export default function SermonsPage() {
             </div>
           </div>
 
-          {/* 2 COLUMNS ON MOBILE DIRECT YOUTUBE VIDEO PLAYER GRID */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-6">
+          {/* RESPONSIVE VIDEO PLAYER GRID */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {displayedSermons.map((item) => (
               <div
                 key={item.id}
@@ -464,22 +461,35 @@ export default function SermonsPage() {
               >
                 <div className="space-y-2">
                   
-                  {/* DIRECT YOUTUBE IFRAME EMBED */}
-                  <div className="relative aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-900 border border-slate-200 shadow-inner">
-                    <iframe
-                      src={item.youtubeUrl}
-                      title={item.title}
-                      className="w-full h-full"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-
-                    <div className="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 pointer-events-none">
-                      <span className="text-[8px] sm:text-[9px] font-black text-white bg-primary-600 px-1.5 sm:px-2.5 py-0.5 rounded-full shadow-md uppercase tracking-wider truncate max-w-[110px] sm:max-w-none inline-block">
+                  {/* Thumbnail with actual video background and play overlay */}
+                  <button
+                    onClick={() => setSelectedVideo(item)}
+                    className="relative aspect-[16/9] sm:aspect-[4/3] lg:aspect-[16/9] rounded-xl sm:rounded-2xl overflow-hidden bg-slate-950 border border-slate-200 shadow-inner flex items-center justify-center group/card w-full"
+                  >
+                    <div className="absolute inset-0 pointer-events-none opacity-90 transition-opacity group-hover/card:opacity-60 flex items-center justify-center">
+                      <iframe
+                        src={item.videoUrl}
+                        title={item.title}
+                        className="w-full h-full lg:w-[314px] lg:h-[560px]"
+                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        scrolling="no"
+                        frameBorder="0"
+                        loading="lazy"
+                      />
+                    </div>
+                    {/* Play button overlay */}
+                    <div className="relative z-10 flex flex-col items-center gap-1 drop-shadow-xl">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/50 border border-white/40 flex items-center justify-center group-hover/card:scale-110 group-hover/card:bg-black/70 transition-all shadow-xl backdrop-blur-md">
+                        <Play className="w-4 h-4 sm:w-5 sm:h-5 fill-white text-white ml-0.5" />
+                      </div>
+                    </div>
+                    {/* Series badge */}
+                    <div className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 z-10">
+                      <span className="text-[8px] sm:text-[9px] font-black text-white bg-primary-600 px-1.5 sm:px-2 py-0.5 rounded-full shadow-md uppercase tracking-wider truncate max-w-[100px] sm:max-w-none inline-block">
                         {item.series}
                       </span>
                     </div>
-                  </div>
+                  </button>
 
                   {/* Preacher & Date Meta Row */}
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[9px] sm:text-[11px] font-bold text-slate-500 gap-0.5">
@@ -504,14 +514,14 @@ export default function SermonsPage() {
                   </div>
                 </div>
 
-                {/* Expand Fullscreen Lightbox Action */}
+                {/* Watch Video Action Button */}
                 <div className="pt-2 border-t border-slate-100">
                   <button
                     onClick={() => setSelectedVideo(item)}
                     className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl bg-slate-900 hover:bg-primary-600 text-white font-extrabold text-[9px] sm:text-xs uppercase tracking-wider transition-colors shadow-sm text-center"
                   >
-                    <Maximize2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-400" />
-                    <span>Watch HD</span>
+                    <Play className="w-3 h-3 sm:w-3.5 sm:h-3.5 fill-white text-white" />
+                    <span>Watch Video</span>
                   </button>
                 </div>
 
@@ -601,12 +611,12 @@ export default function SermonsPage() {
 
       {/* 4. FULL VIDEO LIGHTBOX MODAL */}
       {selectedVideo && (
-        <div className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6">
-          <div className="relative w-full max-w-4xl bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 space-y-0 text-left">
+        <div className="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-xl flex items-center justify-center p-2 sm:p-6">
+          <div className="relative w-full max-w-4xl max-h-[95vh] flex flex-col bg-slate-900 rounded-3xl overflow-hidden shadow-2xl border border-slate-800 text-left">
             
-            {/* Lightbox Header Bar */}
-            <div className="flex items-center justify-between p-4 sm:p-5 bg-slate-950 border-b border-slate-800">
-              <div className="space-y-1 truncate max-w-md sm:max-w-xl">
+            {/* Lightbox Header Bar (Fixed) */}
+            <div className="flex-none flex items-center justify-between p-4 sm:p-5 bg-slate-950 border-b border-slate-800">
+              <div className="space-y-1 truncate pr-2 max-w-[85%] sm:max-w-xl">
                 <span className="text-[10px] font-black text-white bg-primary-600 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                   {selectedVideo.series}
                 </span>
@@ -617,26 +627,28 @@ export default function SermonsPage() {
 
               <button
                 onClick={() => setSelectedVideo(null)}
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold transition-colors"
+                className="w-10 h-10 flex-shrink-0 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center font-bold transition-colors"
                 title="Close Lightbox"
               >
-                <X className="w-5 h-5 text-white" />
+                <X className="w-6 h-6 text-white" />
               </button>
             </div>
 
-            {/* HD Video iFrame */}
-            <div className="relative aspect-[16/9] w-full bg-black">
+            {/* HD Video iFrame - Flexible height container */}
+            <div className="flex-1 w-full bg-black flex items-center justify-center overflow-hidden min-h-[300px] sm:min-h-[400px]">
               <iframe
-                src={`${selectedVideo.youtubeUrl}?autoplay=1`}
+                src={selectedVideo.videoUrl}
                 title={selectedVideo.title}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                className="w-full h-full md:w-[314px] md:h-[560px]"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                 allowFullScreen
+                scrolling="no"
+                frameBorder="0"
               />
             </div>
 
-            {/* Lightbox Description Footer */}
-            <div className="p-4 sm:p-6 bg-slate-900 space-y-2">
+            {/* Lightbox Description Footer (Fixed bottom) */}
+            <div className="flex-none p-4 sm:p-6 bg-slate-900 space-y-2 overflow-y-auto max-h-[30vh]">
               <div className="flex items-center gap-2 text-xs font-bold text-amber-300">
                 <User className="w-4 h-4 text-amber-400" />
                 <span>Preached by {selectedVideo.speaker}</span>
@@ -650,6 +662,7 @@ export default function SermonsPage() {
         </div>
       )}
 
+      {/* section 5 below */}
       {/* 5. SPLIT CARD CTA SECTION */}
       <section className="py-16 sm:py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-[1440px] mx-auto px-4 md:px-8">

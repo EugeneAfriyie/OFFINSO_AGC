@@ -14,7 +14,7 @@ export function MinistriesSection() {
       subtitle: "Nursery to Age 12",
       description: "Nurturing young hearts in a safe, fun, and loving environment with engaging Bible lessons.",
       icon: Baby,
-      image: "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784811349/ab5fef61-bf19-4026-a773-a365dd1e3a81.png",
     },
     {
       id: "youth",
@@ -22,7 +22,7 @@ export function MinistriesSection() {
       subtitle: "Teenagers & Students",
       description: "Empowering the next generation with Pentecostal fire, godly purpose, and authentic fellowship.",
       icon: Flame,
-      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784811455/13c63027-214d-4d56-80f4-95bdb654736c.png",
     },
     {
       id: "women",
@@ -30,7 +30,7 @@ export function MinistriesSection() {
       subtitle: "Sisters in Christ",
       description: "Building strong women of prayer, wisdom, and encouragement through mentorship and prayer circles.",
       icon: Heart,
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810933/3c39b22a-c213-4d13-96a2-a6a0715f0450.png",
     },
     {
       id: "men",
@@ -46,7 +46,7 @@ export function MinistriesSection() {
       subtitle: "Praise & Sound Team",
       description: "Leading the congregation into Spirit-filled worship through music, choir, and media production.",
       icon: Music,
-      image: "https://images.unsplash.com/photo-1510563800743-aed236490d08?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784562978/a0d09b69-8f99-46c2-b8f5-3dd6aca68b92.png",
     },
     {
       id: "outreach",
@@ -54,7 +54,7 @@ export function MinistriesSection() {
       subtitle: "Gospel Missions",
       description: "Demonstrating Christ's love across Offinso, Kumasi through community aid, medical screening, and outreach.",
       icon: Globe,
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784562583/a97a1d2e-fde6-4c7b-91fe-229b5e707d7c.png",
     },
   ];
 

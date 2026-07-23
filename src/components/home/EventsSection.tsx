@@ -17,7 +17,7 @@ export function EventsSection() {
       time: "9:00 AM – 1:00 PM",
       location: "Main Sanctuary • Offinso Toll Booth",
       description: "Join Senior Pastor Collins Ababio for a powerful 3-day spiritual awakening filled with praise, healing, and prophetic worship.",
-      image: "https://images.unsplash.com/photo-1510563800743-aed236490d08?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810555/941727b3-fc8e-4ae3-84b5-90d7d01d2607.png",
       featured: true,
     },
     {
@@ -29,7 +29,7 @@ export function EventsSection() {
       time: "6:00 PM – 8:30 PM",
       location: "Youth Center • Offinso Toll Booth",
       description: "An energetic evening of worship, drama, word, and fellowship for teenagers, students, and young adults across Offinso, Kumasi.",
-      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810596/2680fa0f-de4a-4e2a-b35c-e137a3a94196.png",
       featured: false,
     },
     {
@@ -41,7 +41,7 @@ export function EventsSection() {
       time: "8:00 AM – 2:00 PM",
       location: "Offinso Community Park",
       description: "Demonstrating Christ's love through free medical screenings, food distribution, and gospel outreach to families in Offinso.",
-      image: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80",
+      image: "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784810626/4e872129-04b8-42d1-8588-8b2f5c7830e1.png",
       featured: false,
     },
   ];
