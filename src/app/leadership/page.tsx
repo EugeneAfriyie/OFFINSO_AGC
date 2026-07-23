@@ -118,13 +118,13 @@ export default function LeadershipPage() {
         {/* Background Sanctuary Photo */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784559187/326fa0fb-f0b5-4856-aaf8-82bff6ea5e05.png"
+            src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829298/715434605_1722625652249640_1538205210890903533_n_xkrlsc.jpg"
             alt="The King's Temple A/G Sanctuary"
             fill
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050B14]/95 via-[#050B14]/85 to-[#050B14]/95" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050B14]/95 via-[#050B14]/65 to-[#050B14]/65" />
         </div>
 
         <div className="relative z-10 max-w-[1440px] mx-auto px-4 md:px-8">

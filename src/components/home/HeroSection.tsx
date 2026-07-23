@@ -72,12 +72,12 @@ export function HeroSection() {
             src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784559187/326fa0fb-f0b5-4856-aaf8-82bff6ea5e05.png"
             alt="The King's Temple Assemblies of God Worship Experience"
             fill
-            className="object-cover object-center opacity-35"
+            className="object-cover object-center opacity-65"
           />
         </video>
 
         {/* High-Contrast Gradient Mask Overlay for Maximum Text Contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#030712] via-[#030712]/90 to-[#030712]/80" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#030712] via-[#030712]/50 to-[#030712]/80" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712]/75" />
       </div>
 

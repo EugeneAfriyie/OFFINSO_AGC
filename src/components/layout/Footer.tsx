@@ -27,8 +27,8 @@ import {
 import { siteConfig } from "@/config/site.config";
 
 export function Footer() {
-  const [newsletterEmail, setNewsletterEmail] = useState("");
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [prayerRequest, setPrayerRequest] = useState("");
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [copiedMoMo, setCopiedMoMo] = useState(false);
   const [copiedBank, setCopiedBank] = useState(false);
 
@@ -36,13 +36,13 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubmitRequest = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!newsletterEmail) return;
-    setIsSubscribed(true);
+    if (!prayerRequest) return;
+    setIsSubmitted(true);
     setTimeout(() => {
-      setIsSubscribed(false);
-      setNewsletterEmail("");
+      setIsSubmitted(false);
+      setPrayerRequest("");
     }, 4000);
   };
 
@@ -67,46 +67,46 @@ export function Footer() {
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-4 md:px-8 space-y-12">
         
-        {/* 1. TOP PROPHETIC NEWSLETTER & BULLETIN BANNER */}
+        {/* 1. TOP PRAYER REQUEST BANNER */}
         <div className="bg-white/5 backdrop-blur-2xl border border-white/15 rounded-3xl p-6 sm:p-10 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 text-left">
           
           <div className="space-y-2 max-w-xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-950 text-sky-300 text-[10px] font-black uppercase tracking-wider border border-primary-500/30">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              <span>PROPHETIC BULLETIN & WEEKLY WORD</span>
+              <Heart className="w-3.5 h-3.5 text-amber-400" />
+              <span>WE ARE HERE FOR YOU</span>
             </div>
 
             <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
-              Stay Connected with Offinso Cathedral
+              Submit a Prayer Request
             </h3>
 
             <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
-              Subscribe to receive weekly sermon notes, prophetic declarations, and event updates directly from Senior Pastor Collins Ababio.
+              No matter what you're facing, we want to stand with you in faith. Send your prayer request directly to our intercessory team.
             </p>
           </div>
 
           <div className="w-full lg:w-auto flex-1 max-w-md">
-            {isSubscribed ? (
+            {isSubmitted ? (
               <div className="p-3.5 rounded-2xl bg-emerald-950/80 border border-emerald-500/40 text-emerald-300 text-xs font-black text-center flex items-center justify-center gap-2">
-                <Sparkles className="w-4 h-4 text-emerald-400" />
-                <span>God bless you! You are subscribed to weekly updates.</span>
+                <Check className="w-4 h-4 text-emerald-400" />
+                <span>God bless you! Your request has been sent to our prayer team.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
+              <form onSubmit={handleSubmitRequest} className="flex flex-col gap-2">
                 <input
-                  type="email"
-                  placeholder="Enter your email address..."
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-xl border border-white/15 bg-white/10 text-white placeholder-slate-400 text-xs font-extrabold focus:outline-none focus:border-amber-400 transition-all"
+                  type="text"
+                  placeholder="What can we pray for today?..."
+                  value={prayerRequest}
+                  onChange={(e) => setPrayerRequest(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl border border-white/15 bg-white/10 text-white placeholder-slate-400 text-xs font-bold focus:outline-none focus:border-amber-400 transition-all"
                   required
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-black uppercase tracking-wider shadow-lg transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                  className="w-full sm:w-auto self-end px-6 py-3 rounded-xl bg-primary-600 hover:bg-primary-500 text-white text-xs font-black uppercase tracking-wider shadow-lg transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                 >
                   <Send className="w-3.5 h-3.5 text-amber-300" />
-                  <span>Subscribe</span>
+                  <span>Send Request</span>
                 </button>
               </form>
             )}

@@ -22,16 +22,77 @@ const getMosaicSpan = (index: number) => {
   return pattern[index % pattern.length];
 };
 
-const generateItems = (prefix: string, count: number, defaultTag: string) => {
-  return Array.from({ length: count }).map((_, i) => {
-    // Deterministic tag selection to avoid Next.js hydration mismatch
-    const randomTag = tags[(i % (tags.length - 1)) + 1]; // Pick a pseudo-random tag deterministically except 'All'
-    // Ensure the first few match the default tag so columns aren't empty initially
+const cloudinaryUrls = [
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829370/719426116_2146544399238922_3597906351030759468_n_plhbav.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829367/718936053_27430374969971966_3646005875504049411_n_mnvbqk.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829364/718776675_1302282458694376_2352107280866221612_n_jrmrb9.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829362/718311251_1293859642946240_9206165397037896971_n_inh5l8.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829359/718099416_1990092631647472_6531422236264697459_n_umq2nq.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829357/717963501_1207688784722182_2022130942501843841_n_rbgecw.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829354/717960070_1021467773643276_6370392498260502872_n_zbondg.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829352/717959501_27039810325686702_1524478505022352236_n_wdkaa5.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829349/717938838_2176111146289106_5941974683589581417_n_i2ijmf.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829347/717910477_1537066584695555_4492341828459318653_n_owkqgs.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829344/717596063_1914887769220101_2241004413717343549_n_wf4u54.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829342/717582482_1505158221307778_7554155079297790187_n_xxdjbp.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829340/717358032_4001226316852747_6129081373910318591_n_jsbbon.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829337/717187294_1794731558361010_3444483635550505715_n_bzvl3v.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829335/717170061_977353951879415_5494597188410063536_n_lgvpcg.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829333/717038864_1681035139804449_248913445583641359_n_f1rg1k.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829330/716898202_1003775765720488_2110746001862204389_n_kq6c8x.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829328/716591281_4419690341653208_5079026505594833969_n_ibhedy.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829325/716591275_1591006275844005_350702273487626896_n_afvgah.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829323/716551303_2249437462552639_4252900274227205685_n_cjmoec.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829321/716510779_1322872963150883_5152299308424259092_n_rgz73n.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829319/716490426_1524911519373339_2604070248241497425_n_wlezyq.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829315/716353754_2127173528061739_9085697199758437676_n_py4p88.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829314/716091052_1521237899634615_635340699947573557_n_iyuvul.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829311/715870933_2054635552071504_7515258739314065108_n_mgrdxb.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829309/715711886_2771014596607898_700937405581073187_n_iab4ya.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829306/715494791_1237807558275179_5946497361540542531_n_xovhl2.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829304/715464670_986885671000418_952633686462347009_n_aqmtws.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829301/715441990_1027189546330864_6455057208052478394_n_up17sk.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829298/715434605_1722625652249640_1538205210890903533_n_xkrlsc.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829296/715426841_2827535454272735_633896995473572485_n_bs1gcc.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829292/715346869_1902820464067316_7688725346205695393_n_fazppo.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829290/715346771_27540687442229052_8488523061918581087_n_g03zr1.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829288/714838385_1864008231226814_6396892895979103384_n_tg8pn7.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829230/714829388_865124869388775_7007555336901307480_n_tutqzi.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829227/714715278_1696989544774706_2580317658037386641_n_g4wtxp.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829225/710827528_1011736811226856_1050823418370125464_n_ehsahp.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829223/710799563_2163981931045623_6162914761603469505_n_fze2dd.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829222/688559240_1400937482077581_6990471613443926480_n_bhodsh.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829219/688547332_1400937422077587_1014027905156086168_n_itfxgl.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829215/688111266_1400937528744243_291690960064752968_n_ntgxms.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829211/686958153_1400937492077580_479987853040969310_n_xjndtf.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829210/686192303_1400937615410901_3023629979847251849_n_hrrit8.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829209/685353515_1400937558744240_5020621293130412194_n_rhrasg.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829204/684670544_1400937622077567_6507850915536175164_n_pa7ix9.jpg",
+  "https://res.cloudinary.com/dzqdfaghg/image/upload/v1784828660/c28c371c-e097-4219-bf12-a0c709e60c70.png"
+];
+
+// Helper to optimize cloudinary URL for performance on the fly
+const getOptimizedUrl = (rawUrl: string, width: number) => {
+  if (!rawUrl.includes('/upload/')) return rawUrl;
+  // This tells Cloudinary to automatically select the best format (WebP/AVIF), 
+  // automatically compress quality, and scale it down to exactly the width we need.
+  return rawUrl.replace('/upload/', `/upload/f_auto,q_auto,w_${width},c_limit/`);
+};
+
+const buildGalleryItems = (urls: string[], prefix: string, defaultTag: string) => {
+  return urls.map((url, i) => {
+    const randomTag = tags[(i % (tags.length - 1)) + 1]; 
     const assignedTag = i < 5 ? defaultTag : randomTag;
 
     return {
       id: `${prefix}-${i}`,
-      url: `https://images.unsplash.com/photo-${1500000000000 + i * 100000}?w=800&q=80&auto=format&fit=crop`, 
+      rawUrl: url,
+      // For the mosaic grid, w_600 is plenty fast and sharp enough
+      url: getOptimizedUrl(url, 600),
+      // For the fullscreen lightbox, we need higher resolution
+      fullUrl: getOptimizedUrl(url, 1600),
+      // For the tiny thumbnail strip, we need very small sizes for instant loading
+      thumbUrl: getOptimizedUrl(url, 150),
       span: getMosaicSpan(i),
       tag: assignedTag,
       title: `Gallery Moment ${i + 1}`,
@@ -40,9 +101,9 @@ const generateItems = (prefix: string, count: number, defaultTag: string) => {
   });
 };
 
-// Generate 45 items per side to demonstrate pagination
-const initialLeftItems = generateItems("L", 45, "Sunday Service");
-const initialRightItems = generateItems("R", 45, "Youth");
+// Split the 46 items equally into the two columns
+const initialLeftItems = buildGalleryItems(cloudinaryUrls.slice(0, 23), "L", "Sunday Service");
+const initialRightItems = buildGalleryItems(cloudinaryUrls.slice(23), "R", "Youth");
 
 export default function GalleryPage() {
   const [activeTag, setActiveTag] = useState("All");
@@ -142,18 +203,18 @@ export default function GalleryPage() {
             <div className="lg:col-span-6 relative h-[400px] sm:h-[500px] w-full hidden lg:block">
               {/* Image 1 - Back */}
               <div className="absolute top-10 right-10 w-[55%] aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl rotate-6 hover:rotate-12 hover:scale-105 transition-all duration-700 border-4 border-slate-900 z-10">
-                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&q=80" alt="Artistic 1" className="w-full h-full object-cover saturate-50 hover:saturate-100 transition-all duration-700" />
+                <img src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829344/717596063_1914887769220101_2241004413717343549_n_wf4u54.jpg" alt="Artistic 1" className="w-full h-full object-cover saturate-50 hover:saturate-100 transition-all duration-700" />
                 <div className="absolute inset-0 bg-primary-900/20 mix-blend-overlay pointer-events-none" />
               </div>
 
               {/* Image 2 - Middle Front */}
               <div className="absolute bottom-10 left-10 w-[50%] aspect-square rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] -rotate-3 hover:-rotate-6 hover:scale-105 transition-all duration-700 border-4 border-slate-900 z-20">
-                <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&q=80" alt="Artistic 2" className="w-full h-full object-cover saturate-50 hover:saturate-100 transition-all duration-700" />
+                <img src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829298/715434605_1722625652249640_1538205210890903533_n_xkrlsc.jpg" alt="Artistic 2" className="w-full h-full object-cover saturate-50 hover:saturate-100 transition-all duration-700" />
               </div>
 
               {/* Image 3 - Accent Float */}
               <div className="absolute top-24 left-[30%] w-[25%] aspect-[3/4] rounded-xl overflow-hidden shadow-2xl -rotate-12 hover:-rotate-0 hover:scale-110 transition-all duration-700 border-2 border-white/10 z-30">
-                <img src="https://images.unsplash.com/photo-1534005831682-15bd8eb88172?w=500&q=80" alt="Artistic 3" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                <img src="https://res.cloudinary.com/dzqdfaghg/image/upload/v1784829330/716898202_1003775765720488_2110746001862204389_n_kq6c8x.jpg" alt="Artistic 3" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
               </div>
             </div>
           </div>
@@ -322,7 +383,7 @@ export default function GalleryPage() {
             </button>
             
             <img 
-              src={visibleActiveItems[lightbox.index].url} 
+              src={visibleActiveItems[lightbox.index].fullUrl} 
               alt="Fullscreen view"
               className="w-full h-full object-contain drop-shadow-2xl"
               onClick={(e) => e.stopPropagation()}
@@ -350,7 +411,7 @@ export default function GalleryPage() {
                     idx === lightbox.index ? "border-primary-500 opacity-100 scale-105 shadow-xl" : "border-transparent opacity-50 hover:opacity-100"
                   }`}
                 >
-                  <img src={item.url} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
+                  <img src={item.thumbUrl} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" loading="lazy" />
                 </button>
               ))}
             </div>
