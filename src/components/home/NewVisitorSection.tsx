@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Sparkles, Calendar, ShieldCheck, Heart, MapPin, Smile, ArrowRight, HelpCircle } from "lucide-react";
+import { Flame, Clock, Calendar, ShieldCheck, Heart, MapPin, Smile, ArrowRight, HelpCircle } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { useModal } from "@/contexts/ModalContext";
 
@@ -16,7 +16,7 @@ export function NewVisitorSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-extrabold uppercase tracking-wider border border-primary-100">
-            <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+            <Heart className="w-3.5 h-3.5 text-primary-600" />
             <span>FIRST TIME VISITING US?</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
@@ -106,8 +106,8 @@ export function NewVisitorSection() {
           <div className="bg-white p-6 rounded-3xl border border-slate-200/90 shadow-sm hover:shadow-md transition-all space-y-3 flex flex-col justify-between group">
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center font-bold">
-                  <Sparkles className="w-5 h-5" />
+                <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center font-bold">
+                  <Flame className="w-5 h-5" />
                 </div>
                 <span className="text-xs font-black text-primary-600 bg-primary-50 px-2.5 py-1 rounded-full border border-primary-100">
                   STEP 04
@@ -120,8 +120,8 @@ export function NewVisitorSection() {
                 Enjoy 90 minutes of Spirit-filled worship praise, uplifting fellowship, and life-changing biblical teaching.
               </p>
             </div>
-            <div className="pt-2 text-[11px] font-bold text-sky-600 flex items-center gap-1">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="pt-2 text-[11px] font-bold text-amber-700 flex items-center gap-1">
+              <Clock className="w-3.5 h-3.5" />
               <span>90-Minute Worship Experience</span>
             </div>
           </div>

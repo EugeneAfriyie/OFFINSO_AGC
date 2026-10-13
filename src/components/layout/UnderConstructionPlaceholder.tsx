@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Sparkles, ArrowLeft, Clock, ShieldCheck, MapPin, Heart } from "lucide-react";
+import { ArrowLeft, Clock, ShieldCheck, MapPin, Heart } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 interface PlaceholderProps {

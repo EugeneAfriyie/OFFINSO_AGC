@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Sparkles } from "lucide-react";
+import { Crown } from "lucide-react";
 import { MegaMenuItem } from "./NavLinks";
 
 interface MegaMenuProps {
@@ -44,7 +44,7 @@ export function MegaMenu({ type, items, onMouseEnter, onMouseLeave, onClose }: M
         {/* Header Pill */}
         <div className="flex items-center justify-between pb-4 mb-6 border-b border-slate-100">
           <span className="text-xs font-black uppercase tracking-wider text-primary-700 bg-primary-50 px-3 py-1 rounded-full border border-primary-100 flex items-center gap-1.5">
-            <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+            <Crown className="w-3.5 h-3.5 text-primary-600" />
             <span>{getHeaderTitle()}</span>
           </span>
           <span className="text-[11px] text-slate-400 font-medium">

@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion, useMotionValue, useSpring, useTransform, useInView, animate } from "framer-motion";
-import { Users, Calendar, ShieldCheck, Flame, Sparkles } from "lucide-react";
+import { Users, Calendar, ShieldCheck, Flame } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 const CUBIC_EASE = [0.16, 1, 0.3, 1] as const;

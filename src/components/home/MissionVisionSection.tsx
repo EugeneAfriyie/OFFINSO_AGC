@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Target, Sparkles, Heart, ShieldCheck, ArrowRight } from "lucide-react";
+import { Target, Flame, Heart, ShieldCheck, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 export function MissionVisionSection() {
@@ -60,7 +60,7 @@ export function MissionVisionSection() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-1">
                 <div className="w-8 h-8 rounded-lg bg-primary-100 text-primary-600 flex items-center justify-center font-bold mb-2">
-                  <Sparkles className="w-4 h-4 text-primary-600" />
+                  <Flame className="w-4 h-4 text-primary-600" />
                 </div>
                 <strong className="text-sm font-extrabold text-slate-900 block">Spirit-Filled Worship</strong>
                 <span className="text-xs text-slate-500 block leading-snug">Vibrant praise and prayer</span>

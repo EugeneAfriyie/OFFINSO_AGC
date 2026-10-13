@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Radio, Volume2, ArrowRight, Sparkles } from "lucide-react";
+import { Radio, Volume2, ArrowRight, Crown } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 export function SermonSection() {
@@ -46,7 +46,7 @@ export function SermonSection() {
               
               <div className="space-y-3">
                 <div className="flex items-center gap-2 text-xs font-extrabold text-primary-600 uppercase tracking-wider">
-                  <Sparkles className="w-3.5 h-3.5" />
+                  <Crown className="w-3.5 h-3.5" />
                   <span>Kingdom Authority Series</span>
                 </div>
 

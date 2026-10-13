@@ -9,7 +9,6 @@ import {
   MapPin, 
   User, 
   Tag, 
-  Sparkles, 
   ArrowRight, 
   Search, 
   CheckCircle2, 
@@ -253,8 +252,9 @@ export default function EventsPage() {
                   onClick={() => openModal("plan-visit")}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-[9px] font-black text-amber-300 uppercase tracking-wider bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/20">
-                      📅 {evt.date.split(",")[0]}
+                    <span className="text-[9px] font-black text-amber-300 uppercase tracking-wider bg-amber-400/10 px-2 py-0.5 rounded border border-amber-400/20 inline-flex items-center gap-1">
+                      <Calendar className="w-3 h-3 text-amber-300" />
+                      <span>{evt.date.split(",")[0]}</span>
                     </span>
                     <ChevronRight className="w-4 h-4 text-slate-400 group-hover:text-primary-400 transition-colors" />
                   </div>
@@ -476,7 +476,7 @@ export default function EventsPage() {
                   onClick={() => openModal("prayer-request")}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 font-extrabold text-xs uppercase tracking-wider px-7 py-4 rounded-xl border border-slate-200 transition-all"
                 >
-                  <Sparkles className="w-4 h-4 text-amber-600" />
+                  <Flame className="w-4 h-4 text-amber-600" />
                   <span>Submit Prayer Request</span>
                 </button>
               </div>

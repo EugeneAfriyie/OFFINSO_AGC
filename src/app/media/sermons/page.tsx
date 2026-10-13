@@ -10,7 +10,6 @@ import {
   Clock, 
   User, 
   Search, 
-  Sparkles, 
   Radio, 
   Video, 
   Headphones, 
@@ -324,8 +323,9 @@ export default function SermonsPage() {
             <div className="w-full lg:w-[440px] flex-shrink-0">
               <div className="bg-white/5 backdrop-blur-2xl border border-white/20 rounded-3xl p-4 shadow-xl space-y-3 relative">
                 <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-black text-white bg-primary-600 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                    ⚡ DIRECT VIDEO PLAYER
+                  <span className="text-[10px] font-black text-white bg-primary-600 px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+                    <Play className="w-3 h-3 fill-white text-white" />
+                    <span>DIRECT VIDEO PLAYER</span>
                   </span>
                   <span className="text-[11px] font-bold text-amber-300">
                     {featuredSermon.badge}
@@ -414,7 +414,7 @@ export default function SermonsPage() {
                     : "bg-amber-50 text-amber-900 hover:bg-amber-100 border-amber-200"
                 }`}
               >
-                ⚡ Prophetic & Breakthrough
+                Prophetic & Breakthrough
               </button>
 
               <button
@@ -584,8 +584,9 @@ export default function SermonsPage() {
                   className="bg-slate-50 border-l-4 border-primary-600 rounded-2xl p-6 space-y-3 shadow-sm hover:shadow-md transition-all border-y border-r border-slate-200/80 flex flex-col justify-between text-left"
                 >
                   <div className="space-y-2">
-                    <div className="inline-block text-[11px] font-extrabold text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">
-                      📖 {card.scripture}
+                    <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">
+                      <BookOpen className="w-3.5 h-3.5 text-amber-800" />
+                      <span>{card.scripture}</span>
                     </div>
 
                     <h3 className="text-base font-extrabold text-slate-900 leading-snug">
@@ -704,8 +705,9 @@ export default function SermonsPage() {
 
             <div className="lg:col-span-5 bg-[#071120] text-white rounded-2xl p-6 sm:p-8 space-y-4 border border-slate-800 shadow-lg text-left">
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-black text-white bg-primary-600 px-3 py-1 rounded-full uppercase tracking-wider">
-                  🔴 LIVE STREAM HUB
+                <span className="text-[10px] font-black text-white bg-primary-600 px-3 py-1 rounded-full uppercase tracking-wider inline-flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-rose-400 animate-pulse" />
+                  <span>LIVE STREAM HUB</span>
                 </span>
                 <span className="text-xs text-slate-400 font-bold">GMT +0:00</span>
               </div>

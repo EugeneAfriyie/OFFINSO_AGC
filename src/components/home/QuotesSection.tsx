@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Quote, Sparkles, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { Quote, BookOpen, ChevronLeft, ChevronRight, Play } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 const CUBIC_EASE = [0.16, 1, 0.3, 1] as const;
@@ -117,7 +117,7 @@ export function QuotesSection() {
               {/* Theme & Reference Tag */}
               <div className="flex items-center justify-between">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 text-[10px] font-mono font-bold uppercase tracking-wider border border-amber-200/80">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                  <BookOpen className="w-3.5 h-3.5 text-amber-600" />
                   <span>{current.theme}</span>
                 </div>
 

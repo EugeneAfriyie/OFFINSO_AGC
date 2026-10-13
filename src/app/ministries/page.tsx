@@ -15,7 +15,6 @@ import {
   Clock, 
   MapPin, 
   ArrowRight, 
-  Sparkles,
   CheckCircle2,
   HeartHandshake,
   Crown
@@ -499,7 +498,7 @@ export default function MinistriesPage() {
 
             <div className="lg:col-span-5 bg-slate-50 rounded-2xl p-6 border border-slate-200 space-y-4 text-left">
               <h4 className="text-xs font-black text-slate-900 uppercase tracking-wider flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-500" />
+                <HeartHandshake className="w-4 h-4 text-amber-500" />
                 <span>4 Core Serve Opportunities</span>
               </h4>
 

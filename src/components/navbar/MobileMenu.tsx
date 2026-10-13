@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Phone, MapPin, Calendar, Heart, MessageCircle, Sparkles } from "lucide-react";
+import { X, Phone, MapPin, Calendar, Heart, MessageCircle, Crown } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { mobileNavLinks } from "./NavLinks";
 import { MobileNavSection } from "./MobileNavSection";
@@ -100,7 +100,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {/* Featured Guest Welcome Card */}
               <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-primary-900 via-primary-800 to-slate-950 text-white shadow-lg space-y-2.5 relative overflow-hidden">
                 <div className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-400 text-slate-950 text-[10px] font-mono font-black uppercase tracking-wider">
-                  <Sparkles className="w-3 h-3 text-slate-950" />
+                  <Crown className="w-3 h-3 text-slate-950" />
                   <span>WELCOME TO WORSHIP</span>
                 </div>
                 <h3 className="text-base sm:text-lg font-extrabold text-white leading-tight">

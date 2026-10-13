@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Sparkles, Heart, BookOpen, ShieldCheck, ArrowRight } from "lucide-react";
+import { Flame, Heart, BookOpen, ShieldCheck, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 export function PastoralWelcomeSection() {
@@ -80,7 +80,7 @@ export function PastoralWelcomeSection() {
               {/* 3 Editorial Pillars */}
               <div className="flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-800 shadow-subtle">
-                  <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+                  <Flame className="w-3.5 h-3.5 text-primary-600" />
                   <span>Vibrant Worship</span>
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-800 shadow-subtle">

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Clock, MapPin, Calendar, Sparkles, Flame, BookOpen, Check, ArrowRight, ShieldCheck } from "lucide-react";
+import { Clock, MapPin, Calendar, Crown, Flame, BookOpen, Check, ArrowRight, ShieldCheck } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { useModal } from "@/contexts/ModalContext";
 
@@ -39,7 +39,7 @@ const SERVICES = [
       "Personal altar ministry and healing prayer",
       "Post-service fellowship with refreshments for new visitors",
     ],
-    icon: Sparkles,
+    icon: Crown,
   },
   {
     id: "service-3",

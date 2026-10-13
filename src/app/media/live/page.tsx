@@ -24,7 +24,7 @@ export default function LiveStreamPage() {
   // Mock chat data
   const [messages, setMessages] = useState([
     { id: 1, user: "Sarah M.", text: "Amen! Such a powerful message.", time: "10:14 AM" },
-    { id: 2, user: "John D.", text: "Watching from London! 👋", time: "10:15 AM" },
+    { id: 2, user: "John D.", text: "Watching from London! God bless you all.", time: "10:15 AM" },
     { id: 3, user: "Grace K.", text: "God is good all the time.", time: "10:16 AM" },
     { id: 4, user: "David O.", text: "Hallelujah! Received it.", time: "10:17 AM" },
   ]);

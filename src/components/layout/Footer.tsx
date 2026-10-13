@@ -10,7 +10,6 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  Sparkles, 
   Send, 
   ShieldCheck, 
   Heart, 
@@ -239,7 +238,7 @@ export function Footer() {
                       OFFICIAL NATIONAL AFFILIATION
                     </span>
                     <div className="font-bold text-xs text-white group-hover:text-amber-300 transition-colors">
-                      Assemblies of God Ghana 🇬🇭
+                      Assemblies of God Ghana
                     </div>
                   </div>
                 </div>

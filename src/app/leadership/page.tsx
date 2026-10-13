@@ -8,7 +8,6 @@ import {
   Heart, 
   Phone, 
   Mail, 
-  Sparkles, 
   ShieldCheck, 
   BookOpen, 
   Calendar, 

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, Quote, Star, Sparkles, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
+import { Heart, Quote, Star, ShieldCheck, CheckCircle2, MessageSquare, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 const CUBIC_EASE = [0.16, 1, 0.3, 1] as const;
@@ -203,7 +203,7 @@ export function TestimonialsSection() {
 
                   {/* Highlight Stat Pill */}
                   <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-amber-900 bg-amber-50 px-2.5 py-0.5 rounded-md border border-amber-200/80">
-                    <Sparkles className="w-3 h-3 text-amber-600" />
+                    <CheckCircle2 className="w-3 h-3 text-amber-600" />
                     <span>{item.highlightStat}</span>
                   </div>
                 </div>

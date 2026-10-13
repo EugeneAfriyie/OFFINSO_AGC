@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Heart, Smartphone, Building2, CreditCard, ShieldCheck, Copy, Check, Lock, Sparkles, ArrowRight } from "lucide-react";
+import { Heart, Smartphone, Building2, CreditCard, ShieldCheck, Copy, Check, Lock, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { GivingModal } from "@/components/modals/GivingModal";
 
@@ -93,7 +93,7 @@ export function GivingSection() {
               {/* Header Pill */}
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center gap-1 text-[11px] font-extrabold text-primary-700 bg-primary-50 px-3 py-1 rounded-full border border-primary-100">
-                  <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+                  <CreditCard className="w-3.5 h-3.5 text-primary-600" />
                   <span>INSTANT ONLINE PAYMENT</span>
                 </span>
                 <span className="text-[11px] text-emerald-600 font-bold flex items-center gap-1">

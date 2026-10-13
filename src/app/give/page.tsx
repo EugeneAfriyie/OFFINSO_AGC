@@ -12,7 +12,7 @@ import {
   Copy, 
   Check, 
   ShieldCheck, 
-  Sparkles, 
+  Flame, 
   ArrowRight, 
   Lock,
   BookOpen,
@@ -45,28 +45,24 @@ export default function GivePage() {
     { 
       id: "Tithe", 
       label: "Tithe (10%)", 
-      icon: "🌾", 
       scripture: "Malachi 3:10",
       desc: "10% Covenant blessing for church storehouse & operations." 
     },
     { 
       id: "Offering", 
       label: "Free-will Offering", 
-      icon: "🪙", 
       scripture: "2 Cor 9:7",
       desc: "Cheerful worship offering to honor God's goodness." 
     },
     { 
       id: "Building Seed", 
       label: "Building Fund", 
-      icon: "🏛️", 
       scripture: "Exodus 25:8",
       desc: "Funding the Offinso Cathedral sanctuary expansion." 
     },
     { 
       id: "Missions", 
       label: "Missions & Fire", 
-      icon: "🔥", 
       scripture: "Mark 16:15",
       desc: "Sponsoring gospel crusades & rural church planting." 
     },
@@ -77,21 +73,21 @@ export default function GivePage() {
       name: "Deacon Emmanuel Mensah",
       role: "Offinso Central Market Business Owner",
       quote: "When I started faithful tithing at The King's Temple A/G in 2021, God turned my struggling retail shop into a thriving wholesale distributor in Offinso. Malachi 3:10 is real!",
-      tag: "🌾 Tithe & Business Harvest",
+      tag: "Tithe & Business Harvest",
       initials: "EM"
     },
     {
       name: "Sister Abigail Appiah",
       role: "Kumasi Healthcare Professional",
       quote: "I sowed a free-will seed towards the Cathedral Building Fund during the August revival. Within 3 weeks, God blessed me with an unexpected international scholarship opportunity!",
-      tag: "🏛️ Building Fund Breakthrough",
+      tag: "Building Fund Breakthrough",
       initials: "AA"
     },
     {
       name: "Brother Kwadwo Baah",
       role: "Offinso Outreach Partner",
       quote: "Supporting the Community Welfare Aid fund for widows and orphans brought an unexplainable peace and supernatural promotion in my career. Giving to God truly pays!",
-      tag: "🍞 Community Welfare Aid",
+      tag: "Community Welfare Aid",
       initials: "KB"
     }
   ];
@@ -181,7 +177,7 @@ export default function GivePage() {
               <div className="bg-white/5 backdrop-blur-2xl border border-white/20 rounded-2xl p-4 shadow-xl space-y-3 text-left relative overflow-hidden">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    <Crown className="w-3.5 h-3.5 text-amber-400" />
                     <span className="text-[10px] font-black text-white uppercase tracking-wider">
                       KINGDOM GIVING HUB
                     </span>
@@ -192,8 +188,9 @@ export default function GivePage() {
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-white/10 border border-white/15 space-y-1">
-                  <div className="text-[9px] font-black uppercase text-sky-300 tracking-wider">
-                    ⚡ Instant MoMo Transfer Number
+                  <div className="text-[9px] font-black uppercase text-sky-300 tracking-wider flex items-center gap-1.5">
+                    <Smartphone className="w-3 h-3 text-sky-300" />
+                    <span>Instant MoMo Transfer Number</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-sm font-black text-white tracking-wide">
@@ -285,7 +282,7 @@ export default function GivePage() {
               {/* Header Pill */}
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center gap-1 text-[11px] font-extrabold text-primary-700 bg-primary-50 px-3 py-1 rounded-full border border-primary-100">
-                  <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+                  <CreditCard className="w-3.5 h-3.5 text-primary-600" />
                   <span>INSTANT ONLINE PAYMENT</span>
                 </span>
                 <span className="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
@@ -376,7 +373,7 @@ export default function GivePage() {
           <div className="flex flex-col lg:flex-row items-start justify-between gap-10">
             <div className="w-full lg:w-96 space-y-4 text-center lg:text-left flex-shrink-0">
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-amber-300 text-[11px] font-black uppercase tracking-wider border border-white/15 backdrop-blur-md">
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                <Flame className="w-3.5 h-3.5 text-amber-300" />
                 <span>COVENANT HARVEST STORIES</span>
               </div>
 
@@ -469,7 +466,7 @@ export default function GivePage() {
                   onClick={() => openModal("prayer-request")}
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-900 font-extrabold text-xs uppercase tracking-wider px-7 py-4 rounded-xl border border-slate-200 transition-all"
                 >
-                  <Sparkles className="w-4 h-4 text-amber-600" />
+                  <Flame className="w-4 h-4 text-amber-600" />
                   <span>Request Pastoral Prayer</span>
                 </button>
               </div>

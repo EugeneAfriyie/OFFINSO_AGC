@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, CreditCard, Smartphone, ShieldCheck, Lock, Heart, Check, Sparkles } from "lucide-react";
+import { X, CreditCard, Smartphone, ShieldCheck, Lock, Heart, Check } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 interface GivingModalProps {

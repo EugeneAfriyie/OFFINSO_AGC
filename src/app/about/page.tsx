@@ -9,7 +9,8 @@ import {
   ShieldCheck, 
   Users, 
   Flame, 
-  Sparkles, 
+  Languages,
+  Crown,
   MapPin, 
   Calendar, 
   ArrowRight,
@@ -127,7 +128,7 @@ export default function AboutPage() {
       title: "Initial Physical Evidence",
       scripture: "Acts 2:4",
       text: "The baptism of believers in the Holy Spirit is witnessed by the initial physical sign of speaking with other tongues as the Spirit of God gives utterance.",
-      icon: Sparkles,
+      icon: Languages,
     },
     {
       num: "09",
@@ -199,7 +200,7 @@ export default function AboutPage() {
           <div className="text-center max-w-4xl mx-auto space-y-6">
             
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-50 text-primary-700 text-xs font-extrabold uppercase tracking-wider border border-primary-100">
-              <Sparkles className="w-4 h-4 text-primary-600" />
+              <Crown className="w-4 h-4 text-primary-600" />
               <span>ABOUT THE KING'S TEMPLE ASSEMBLIES OF GOD</span>
             </div>
 
@@ -267,7 +268,7 @@ export default function AboutPage() {
             
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-extrabold uppercase tracking-wider border border-primary-100">
-                <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+                <Calendar className="w-3.5 h-3.5 text-primary-600" />
                 <span>ESTABLISHED APRIL 9, 2019</span>
               </div>
 
@@ -347,7 +348,7 @@ export default function AboutPage() {
           
           <div className="text-center max-w-3xl mx-auto mb-14 space-y-3">
             <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-primary-50 text-primary-700 text-xs font-extrabold uppercase tracking-wider border border-primary-100">
-              <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+              <Heart className="w-3.5 h-3.5 text-primary-600" />
               <span>OUR KINGDOM CULTURE</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
@@ -491,7 +492,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-primary-900 via-primary-800 to-navy-950 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div className="space-y-1">
               <div className="inline-flex items-center gap-1 text-amber-300 text-xs font-black uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                <ShieldCheck className="w-3.5 h-3.5 text-amber-300" />
                 <span>ASSEMBLIES OF GOD GHANA DOCTRINAL SEAL</span>
               </div>
               <h4 className="text-lg font-extrabold text-white">

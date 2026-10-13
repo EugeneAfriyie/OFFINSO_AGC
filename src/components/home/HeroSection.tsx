@@ -6,7 +6,7 @@ import Link from "next/link";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import {
   Calendar,
-  Sparkles,
+  Car,
   ShieldCheck,
   Heart,
   Users,
@@ -447,7 +447,7 @@ export function HeroSection() {
 
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-3.5 h-3.5 text-primary-600" />
+                    <Car className="w-3.5 h-3.5 text-primary-600" />
                   </div>
                   <div>
                     <strong className="text-slate-900 block font-bold text-[10px]">Parking</strong>

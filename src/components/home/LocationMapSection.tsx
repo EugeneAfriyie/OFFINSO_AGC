@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { MapPin, Navigation, Phone, Mail, Clock, ShieldCheck, Sparkles, ExternalLink } from "lucide-react";
+import { MapPin, Navigation, Phone, Mail, Clock, ShieldCheck, ExternalLink } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 export function LocationMapSection() {
@@ -34,7 +34,7 @@ export function LocationMapSection() {
             
             <div className="space-y-6">
               <div className="inline-flex items-center gap-1 text-[11px] font-extrabold text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-200">
-                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <Navigation className="w-3.5 h-3.5 text-amber-600" />
                 <span>OFFINSO CATHEDRAL CAMPUS</span>
               </div>
 

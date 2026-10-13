@@ -1,6 +1,6 @@
 import { 
   BookOpen, Users, Heart, ShieldCheck, 
-  Baby, Sparkles, UserCheck, Flame, 
+  Baby, Compass, UserCheck, Flame, 
   Music, Globe, Video, Radio, Podcast, 
   Image as ImageIcon, Calendar, MapPin, Phone, MessageSquare
 } from "lucide-react";
@@ -78,7 +78,7 @@ export const desktopNavLinks: NavLinkItem[] = [
         title: "Young Adults",
         description: "Connecting young professionals and tertiary students in fellowship.",
         href: "/ministries#young-adults",
-        icon: Sparkles,
+        icon: Compass,
       },
       {
         title: "Women's Ministry",

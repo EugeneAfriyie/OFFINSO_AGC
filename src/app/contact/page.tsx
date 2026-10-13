@@ -11,7 +11,7 @@ import {
   Send, 
   CheckCircle2, 
   Copy, 
-  Sparkles, 
+  Flame, 
   MessageSquare, 
   User, 
   PhoneCall, 
@@ -68,7 +68,7 @@ export default function ContactPage() {
       id: "prayer",
       title: "24/7 Prayer Vigil",
       subtitle: "Urgent Intercession Desk",
-      icon: Sparkles,
+      icon: Flame,
       tag: "PRAYER NETWORK",
       desc: "Submit urgent prayer requests to our intercessory prayer warriors standing by 24/7 for healing, deliverance, and divine protection."
     },
@@ -129,9 +129,15 @@ export default function ContactPage() {
               <span>OFFINSO CATHEDRAL SANCTUARY IS OPEN FOR WORSHIP</span>
             </div>
             <div className="flex items-center gap-4 text-[11px] font-semibold text-slate-300">
-              <span>📍 Offinso Toll Booth Highway</span>
+              <span className="inline-flex items-center gap-1.5">
+                <MapPin className="w-3.5 h-3.5 text-amber-400" />
+                <span>Offinso Toll Booth Highway</span>
+              </span>
               <span className="hidden sm:inline">•</span>
-              <span className="hidden sm:inline">📞 {siteConfig.phone}</span>
+              <span className="hidden sm:inline-flex items-center gap-1.5">
+                <Phone className="w-3.5 h-3.5 text-amber-400" />
+                <span>{siteConfig.phone}</span>
+              </span>
             </div>
           </div>
 
@@ -167,7 +173,7 @@ export default function ContactPage() {
                   onClick={() => openModal("prayer-request")}
                   className="px-5 py-3 rounded-xl text-xs font-black bg-white/10 hover:bg-white/20 text-amber-300 uppercase tracking-wider border border-white/20 backdrop-blur-md transition-all inline-flex items-center gap-2"
                 >
-                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  <Flame className="w-4 h-4 text-amber-400" />
                   <span>Request Pastoral Prayer</span>
                 </button>
               </div>
@@ -317,8 +323,9 @@ export default function ContactPage() {
 
               <div className="pt-1 space-y-2">
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 space-y-1">
-                  <div className="text-[9px] font-black uppercase text-amber-400">
-                    ⚡ Direct Telephone Line
+                  <div className="text-[9px] font-black uppercase text-amber-400 flex items-center gap-1.5">
+                    <Phone className="w-3 h-3 text-amber-400" />
+                    <span>Direct Telephone Line</span>
                   </div>
                   <div className="flex items-center justify-between text-xs font-black text-white">
                     <span>{siteConfig.phone}</span>
@@ -455,13 +462,19 @@ export default function ContactPage() {
 
                 <div className="space-y-3 text-xs text-slate-700">
                   <div className="space-y-1">
-                    <p className="font-extrabold text-slate-900">🚗 Driving from Kumasi Central:</p>
-                    <p className="text-slate-600">Take the N6 Highway heading towards Offinso. Turn right at the Offinso Toll Booth. The Cathedral sanctuary is clearly visible on your right.</p>
+                    <p className="font-extrabold text-slate-900 flex items-center gap-1.5">
+                      <Navigation className="w-3.5 h-3.5 text-primary-600" />
+                      <span>Driving from Kumasi Central:</span>
+                    </p>
+                    <p className="text-slate-600 pl-5">Take the N6 Highway heading towards Offinso. Turn right at the Offinso Toll Booth. The Cathedral sanctuary is clearly visible on your right.</p>
                   </div>
 
                   <div className="space-y-1">
-                    <p className="font-extrabold text-slate-900">🚌 By Public Transport (Trotro):</p>
-                    <p className="text-slate-600">Board any Offinso-bound vehicle from Kejetia or Abrepo Junction. Alight at the Offinso Toll Booth junction. 2 minutes walk to church auditorium.</p>
+                    <p className="font-extrabold text-slate-900 flex items-center gap-1.5">
+                      <Compass className="w-3.5 h-3.5 text-primary-600" />
+                      <span>By Public Transport (Trotro):</span>
+                    </p>
+                    <p className="text-slate-600 pl-5">Board any Offinso-bound vehicle from Kejetia or Abrepo Junction. Alight at the Offinso Toll Booth junction. 2 minutes walk to church auditorium.</p>
                   </div>
                 </div>
               </div>
@@ -489,7 +502,7 @@ export default function ContactPage() {
         <div className="max-w-[1440px] mx-auto px-4 md:px-8">
           <div className="bg-white/5 backdrop-blur-2xl border border-white/15 rounded-3xl p-8 sm:p-12 max-w-4xl mx-auto text-center space-y-5 shadow-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/10 text-amber-300 text-xs font-extrabold uppercase tracking-wider border border-amber-400/20">
-              <Sparkles className="w-4 h-4 text-amber-400" />
+              <Flame className="w-4 h-4 text-amber-400" />
               <span>PASTORAL COUNSELING & PRAYER LINE</span>
             </div>
 

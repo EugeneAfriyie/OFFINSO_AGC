@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Clock, Phone, MapPin, Sparkles, Heart } from "lucide-react";
+import { Clock, Phone, MapPin, Heart } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 export function TopBar() {

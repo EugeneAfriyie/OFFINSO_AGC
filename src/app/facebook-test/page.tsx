@@ -23,6 +23,8 @@ import {
   Users,
   Clock,
   ChevronRight,
+  Check,
+  X,
   MapPin,
   Phone,
   Mail,
@@ -73,7 +75,7 @@ const SAMPLE_POSTS = [
     id: 1,
     type: "service",
     time: "2 hours ago",
-    content: "🔥 SUNDAY PROPHETIC DECLARATION & REVIVAL SERVICE 🔥\n\n\"For I know the plans I have for you,\" declares the LORD — Jeremiah 29:11\n\nJoin Senior Pastor Collins Ababio this Sunday at 9:00 AM & 11:00 AM.",
+    content: "SUNDAY PROPHETIC DECLARATION & REVIVAL SERVICE\n\n\"For I know the plans I have for you,\" declares the LORD — Jeremiah 29:11\n\nJoin Senior Pastor Collins Ababio this Sunday at 9:00 AM & 11:00 AM.",
     tags: ["#TheKingsTempleAG", "#OffinsoRevival", "#AssembliesOfGod"],
     likes: 428,
     comments: 94,
@@ -84,7 +86,7 @@ const SAMPLE_POSTS = [
     id: 2,
     type: "prayer",
     time: "Yesterday",
-    content: "🙏 MIDWEEK PRAYER & BIBLE STUDY\n\nEvery Wednesday at 6:30 PM. Come expectant, come prepared. The Word of God is alive and active!\n\nBring a friend. Experience breakthrough.",
+    content: "MIDWEEK PRAYER & BIBLE STUDY\n\nEvery Wednesday at 6:30 PM. Come expectant, come prepared. The Word of God is alive and active!\n\nBring a friend. Experience breakthrough.",
     tags: ["#PrayerWorks", "#BibleStudy", "#KingsTemple"],
     likes: 213,
     comments: 47,
@@ -95,7 +97,7 @@ const SAMPLE_POSTS = [
     id: 3,
     type: "announcement",
     time: "3 days ago",
-    content: "📢 UPCOMING SPECIAL EVENT\n\nThe King's Temple A/G invites you to our Annual Harvest Thanksgiving Service. A night of praise, worship, and generosity.\n\nDate: First Sunday of November · Time: 10:00 AM",
+    content: "UPCOMING SPECIAL EVENT\n\nThe King's Temple A/G invites you to our Annual Harvest Thanksgiving Service. A night of praise, worship, and generosity.\n\nDate: First Sunday of November · Time: 10:00 AM",
     tags: ["#HarvestThanksgiving", "#OffinsoGhana"],
     likes: 341,
     comments: 72,
@@ -158,7 +160,7 @@ function PostCard({ post }: { post: typeof SAMPLE_POSTS[0] }) {
 
       {/* Reactions bar */}
       <div className="px-4 py-2 bg-slate-50 border-t border-b border-slate-100 flex items-center justify-between text-xs text-slate-500 font-semibold">
-        <span>👍 ❤️ {post.likes} reactions</span>
+        <span>{post.likes} reactions</span>
         <span>{post.comments} Comments · {post.shares} Shares</span>
       </div>
 
@@ -350,7 +352,7 @@ export default function FacebookTestPage() {
 
                 {/* Note card */}
                 <div className="bg-blue-500/5 border border-blue-500/20 rounded-2xl p-4 space-y-1.5">
-                  <div className="text-xs font-black text-blue-300 uppercase tracking-wide">⚠ Facebook Limit</div>
+                  <div className="text-xs font-black text-blue-300 uppercase tracking-wide">Facebook Limit</div>
                   <p className="text-xs text-slate-400 leading-relaxed">
                     Facebook's Page Plugin is capped at <strong className="text-white">500px wide</strong> — it always looks
                     "mobile-sized". That's why we use the right column for church info. On our real pages, we'll use custom
@@ -560,7 +562,8 @@ export default function FacebookTestPage() {
                   <ul className="space-y-1.5">
                     {item.pros.map((p, i) => (
                       <li key={i} className="text-xs text-slate-300 flex items-start gap-1.5">
-                        <span className="text-emerald-400 mt-px">✓</span> {p}
+                        <Check className="w-3.5 h-3.5 text-emerald-400 mt-0.5 shrink-0" />
+                        <span>{p}</span>
                       </li>
                     ))}
                   </ul>
@@ -570,7 +573,8 @@ export default function FacebookTestPage() {
                   <ul className="space-y-1.5">
                     {item.cons.map((c, i) => (
                       <li key={i} className="text-xs text-slate-400 flex items-start gap-1.5">
-                        <span className="text-rose-400 mt-px">✗</span> {c}
+                        <X className="w-3.5 h-3.5 text-rose-400 mt-0.5 shrink-0" />
+                        <span>{c}</span>
                       </li>
                     ))}
                   </ul>
@@ -578,7 +582,7 @@ export default function FacebookTestPage() {
                 <div className={`rounded-xl px-3 py-2 text-xs font-bold ${
                   item.color === "amber" ? "bg-amber-500/10 text-amber-300" :
                   item.color === "emerald" ? "bg-emerald-500/10 text-emerald-300" : "bg-blue-500/10 text-blue-300"
-                }`}>💡 {item.verdict}</div>
+                }`}>{item.verdict}</div>
               </div>
             ))}
           </div>

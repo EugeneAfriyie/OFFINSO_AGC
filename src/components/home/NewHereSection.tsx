@@ -9,7 +9,7 @@ import {
   Music, 
   Coffee, 
   UserCheck, 
-  Sparkles,
+  Heart,
   Calendar
 } from "lucide-react";
 import { useModal } from "@/contexts/ModalContext";
@@ -57,7 +57,7 @@ export function NewHereSection() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary-50 text-primary-600 text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Heart className="w-3.5 h-3.5" />
             <span>FIRST-TIME GUESTS</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-body tracking-tight">

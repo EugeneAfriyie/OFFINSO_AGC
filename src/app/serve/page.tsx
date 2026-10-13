@@ -11,7 +11,6 @@ import {
   Heart, 
   ShieldCheck, 
   Check, 
-  Sparkles, 
   Send 
 } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
@@ -136,7 +135,7 @@ export default function ServePage() {
           
           <div className="text-center space-y-2">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-extrabold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+              <HeartHandshake className="w-3.5 h-3.5 text-amber-600" />
               <span>JOIN A SERVE TEAM TODAY</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">

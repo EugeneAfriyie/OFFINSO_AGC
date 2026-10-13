@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Heart, Phone, ShieldCheck, Lock, Send, ArrowRight, Sparkles } from "lucide-react";
+import { Heart, Phone, ShieldCheck, Lock, Send, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 import { useModal } from "@/contexts/ModalContext";
 

@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { HelpCircle, ChevronDown, Sparkles, MessageCircle, ArrowRight } from "lucide-react";
+import { HelpCircle, ChevronDown, MessageCircle, ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
 export function FaqSection() {
