@@ -52,3 +52,100 @@
 .btn-bright-glow:hover {
   box-shadow: 0 8px 30px rgba(37, 99, 235, 0.50);
 }
+
+/* Micro-Font Legibility Safeguards */
+.text-\[9px\] {
+  font-size: 10.5px !important;
+}
+.text-\[10px\] {
+  font-size: 11.5px !important;
+}
+.text-\[10\.5px\] {
+  font-size: 12px !important;
+}
+.text-\[11px\] {
+  font-size: 12.5px !important;
+}
+
+/* Selection Color (Contextual Royal Blue & Gold) */
+::selection {
+  background: #1e73e8;
+  color: #ffffff;
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Contextual Brand Gradients & Glows (Royal Blue & Amber/Gold) */
+.text-royal-gradient {
+  background: linear-gradient(135deg, #1e73e8 0%, #0a4d9c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f59e0b 0%, #d4af37 50%, #b89228 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-glow-blue {
+  box-shadow: 0 0 24px -4px rgba(30, 115, 232, 0.22);
+}
+
+.border-glow-gold {
+  box-shadow: 0 0 24px -4px rgba(212, 175, 55, 0.25);
+}
+
+/* High-Performance GPU-Accelerated Infinite Marquee */
+@keyframes marquee-to-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marquee-to-right {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-to-left 34s linear infinite;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-to-right 34s linear infinite;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover,
+.marquee-container:hover .animate-marquee-left,
+.marquee-container:hover .animate-marquee-right {
+  animation-play-state: paused;
+}
+

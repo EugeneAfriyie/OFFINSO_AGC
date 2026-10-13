@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { NavLinkItem } from "./NavLinks";
 
@@ -40,21 +41,29 @@ export function MobileNavSection({ item, onCloseMobile }: MobileNavSectionProps)
         />
       </button>
 
-      {isOpen && (
-        <div className="px-3 pb-3 space-y-1.5 border-t border-slate-200/60 pt-2 bg-white">
-          {item.megaItems?.map((sub, idx) => (
-            <Link
-              key={idx}
-              href={sub.href}
-              onClick={onCloseMobile}
-              className="block p-2.5 rounded-lg hover:bg-slate-50 text-xs text-slate-700 font-semibold transition-colors"
-            >
-              <div className="font-extrabold text-slate-900">{sub.title}</div>
-              <div className="text-[11px] text-slate-500 line-clamp-1">{sub.description}</div>
-            </Link>
-          ))}
-        </div>
-      )}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden px-3 pb-3 space-y-1.5 border-t border-slate-200/60 pt-2 bg-white"
+          >
+            {item.megaItems?.map((sub, idx) => (
+              <Link
+                key={idx}
+                href={sub.href}
+                onClick={onCloseMobile}
+                className="block p-2.5 rounded-lg hover:bg-slate-50 text-xs text-slate-700 font-semibold transition-colors"
+              >
+                <div className="font-extrabold text-slate-900">{sub.title}</div>
+                <div className="text-[11px] text-slate-500 line-clamp-1">{sub.description}</div>
+              </Link>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

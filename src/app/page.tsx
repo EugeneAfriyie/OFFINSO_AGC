@@ -1,4 +1,6 @@
 import { HeroSection } from "@/components/home/HeroSection";
+import { SanctuaryTickerBar } from "@/components/home/SanctuaryTickerBar";
+import { ChurchImpactMetrics } from "@/components/home/ChurchImpactMetrics";
 import { ServiceTimesSection } from "@/components/home/ServiceTimesSection";
 import { PastoralWelcomeSection } from "@/components/home/PastoralWelcomeSection";
 import { QuotesSection } from "@/components/home/QuotesSection";
@@ -15,50 +17,37 @@ import { LocationMapSection } from "@/components/home/LocationMapSection";
 export default function HomePage() {
   return (
     <>
-      {/* ACT 1: WELCOME & IMMEDIATE CLARITY */}
-      {/* Section 9: Master Hero Section */}
+      {/* ACT 1: GRAND EDITORIAL HERO & MARQUEE ANNOUNCEMENTS */}
       <HeroSection />
+      <SanctuaryTickerBar />
 
-      {/* Section 10: Service Times & Location Bar */}
+      {/* ACT 2: VERIFIED KINGDOM IMPACT & AUTHORITY METRICS */}
+      <ChurchImpactMetrics />
+
+      {/* ACT 3: INTERACTIVE SERVICE TIMES & GATHERING GUIDE */}
       <ServiceTimesSection />
 
-      {/* ACT 2: PASTORAL HEART & INSPIRATION */}
-      {/* Section 11: Pastoral Welcome Section */}
+      {/* ACT 4: PASTORAL HEART & INSPIRATION */}
       <PastoralWelcomeSection />
-
-      {/* Section 11.5: Pastoral & Scripture Quotes Showcase */}
       <QuotesSection />
 
-      {/* ACT 3: IDENTITY & VISITOR EXPERIENCE */}
-      {/* Section 12: Mission & Vision Section */}
+      {/* ACT 5: IDENTITY & VISITOR EXPERIENCE */}
       <MissionVisionSection />
-
-      {/* Section 13: New Visitor Experience Section */}
       <NewVisitorSection />
 
-      {/* ACT 4: MEDIA & SERMON SHOWCASE */}
-      {/* Section 14: Sermon & Media Section */}
+      {/* ACT 6: MEDIA & SERMON BROADCAST */}
       <SermonSection />
 
-      {/* ACT 5: COMMUNITY & MINISTRIES */}
-      {/* Section 15: Upcoming Events Section */}
+      {/* ACT 7: COMMUNITY & MINISTRIES */}
       <EventsSection />
-
-      {/* Section 16: Ministries Showcase Section */}
       <MinistriesSection />
 
-      {/* ACT 6: FRUIT & STEWARDSHIP */}
-      {/* Section 18: Testimonials & Community Impact Section */}
+      {/* ACT 8: FRUIT & STEWARDSHIP */}
       <TestimonialsSection />
-
-      {/* Section 17: Online Giving & Tithing Section */}
       <GivingSection />
 
-      {/* ACT 7: CARE & LOCATION FINALE */}
-      {/* Section 19: Prayer Request & Pastoral Support Banner */}
+      {/* ACT 9: PASTORAL CARE & LOCATION FINALE */}
       <PrayerSection />
-
-      {/* Section 21: Campus Map & Directions Banner */}
       <LocationMapSection />
     </>
   );

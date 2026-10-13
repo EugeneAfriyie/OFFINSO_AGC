@@ -40,6 +40,31 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+        serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+        display: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        '2xs': ['0.75rem', { lineHeight: '1.1rem' }],
+        'xs': ['0.8125rem', { lineHeight: '1.25rem' }],
+        'sm': ['0.925rem', { lineHeight: '1.425rem' }],
+        'base': ['1rem', { lineHeight: '1.6rem' }],
+        'lg': ['1.125rem', { lineHeight: '1.75rem' }],
+        'xl': ['1.25rem', { lineHeight: '1.85rem' }],
+      },
+      animation: {
+        marquee: 'marquee 28s linear infinite',
+        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'glow-slow': 'glow 4s ease-in-out infinite alternate',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        glow: {
+          '0%': { opacity: '0.4', filter: 'blur(20px)' },
+          '100%': { opacity: '0.8', filter: 'blur(32px)' },
+        },
       },
       boxShadow: {
         'subtle': '0 2px 8px 0 rgba(10, 77, 156, 0.05)',

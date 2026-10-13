@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Bot, Send, Sparkles, User, X, RefreshCw, MapPin, Clock, Heart, ShieldCheck, Phone, CreditCard, ChevronRight } from "lucide-react";
 import { siteConfig } from "@/config/site.config";
 
@@ -228,9 +229,11 @@ export function FloatingChurchBot() {
     <>
       {/* Floating Trigger Button (Bottom Right) */}
       <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 z-50">
-        <button
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(!isOpen)}
-          className="relative group bg-primary-600 hover:bg-primary-700 text-white p-3.5 sm:p-4 rounded-full shadow-2xl flex items-center gap-2.5 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95"
+          className="relative group bg-primary-600 hover:bg-primary-700 text-white p-3.5 sm:p-4 rounded-full shadow-2xl flex items-center gap-2.5 border-2 border-amber-300 transition-colors"
           aria-label="Toggle Temple Assistant AI Chat Bot"
         >
           <div className="relative">
@@ -240,12 +243,19 @@ export function FloatingChurchBot() {
           <span className="hidden sm:inline-block font-extrabold text-xs uppercase tracking-wider pr-1">
             Church Guide AI
           </span>
-        </button>
+        </motion.button>
       </div>
 
       {/* Floating Corner Chat Window (82vh Height & ~65% Desktop Width) */}
-      {isOpen && (
-        <div className="fixed bottom-4 sm:bottom-6 right-3 sm:right-6 z-50 w-[92vw] sm:w-[68vw] md:w-[60vw] max-w-2xl h-[82vh] max-h-[720px] bg-white rounded-3xl border border-slate-200 shadow-2xl flex flex-col overflow-hidden animate-slideUp">
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.96 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed bottom-4 sm:bottom-6 right-3 sm:right-6 z-50 w-[92vw] sm:w-[68vw] md:w-[60vw] max-w-2xl h-[82vh] max-h-[720px] bg-white rounded-3xl border border-slate-200 shadow-2xl flex flex-col overflow-hidden"
+          >
           
           {/* Header Bar */}
           <div className="bg-gradient-to-r from-primary-700 via-primary-600 to-primary-800 text-white p-4 px-6 flex items-center justify-between flex-shrink-0">
@@ -364,8 +374,9 @@ export function FloatingChurchBot() {
             </button>
           </form>
 
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }

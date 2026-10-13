@@ -20,7 +20,7 @@ export interface NavLinkItem {
   megaItems?: MegaMenuItem[];
 }
 
-export const navLinks: NavLinkItem[] = [
+export const desktopNavLinks: NavLinkItem[] = [
   {
     label: "Home",
     href: "/",
@@ -143,6 +143,18 @@ export const navLinks: NavLinkItem[] = [
     href: "/events",
   },
   {
+    label: "Contact",
+    href: "/contact",
+  },
+];
+
+export const mobileNavLinks: NavLinkItem[] = [
+  ...desktopNavLinks.slice(0, 4),
+  {
+    label: "Events",
+    href: "/events",
+  },
+  {
     label: "Give",
     href: "/give",
   },
@@ -151,3 +163,5 @@ export const navLinks: NavLinkItem[] = [
     href: "/contact",
   },
 ];
+
+export const navLinks = desktopNavLinks;
