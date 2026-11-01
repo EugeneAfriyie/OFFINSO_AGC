@@ -23,8 +23,7 @@ import { siteConfig } from "@/config/site.config";
 type SourceType = "facebook" | "youtube";
 
 const UPCOMING_SERVICES = [
-  { label: "1st Sunday Service", time: "9:00 AM – 10:30 AM", day: "Every Sunday" },
-  { label: "2nd Sunday Service", time: "11:00 AM – 12:30 PM", day: "Every Sunday" },
+  { label: "Sunday Worship Service", time: "9:00 AM – 11:30 AM", day: "Every Sunday" },
   { label: "Midweek Bible Study", time: "6:30 PM – 8:00 PM", day: "Every Wednesday" },
 ];
 
@@ -74,7 +73,7 @@ export default function WatchPage() {
                 Watch <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-amber-300">Live</span>
               </h1>
               <p className="text-slate-400 text-sm max-w-md leading-relaxed">
-                Stream Sunday services live and watch past sermons from{" "}
+                Stream Sunday service live and watch past sermons from{" "}
                 <span className="text-amber-300 font-semibold">The King's Temple A/G</span> — right here on our site.
               </p>
             </div>
@@ -226,7 +225,7 @@ export default function WatchPage() {
                 <span className="text-xs font-black text-rose-300 uppercase tracking-wider">Live Status</span>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
-                We stream live every <strong className="text-white">Sunday</strong> at 9:00 AM & 11:00 AM.
+                We stream live every <strong className="text-white">Sunday</strong> at 9:00 AM.
                 When we go live on Facebook, the player above will switch to the live broadcast automatically.
               </p>
               <a

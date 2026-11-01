@@ -679,7 +679,7 @@ export default function SermonsPage() {
               </h2>
 
               <p className="text-xs sm:text-base text-slate-600 leading-relaxed font-normal">
-                Join Senior Pastor Collins Ababio and the sanctuary worship team live every Sunday at 9:00 AM & 11:00 AM at Offinso Toll Booth, Kumasi, or stream worldwide on YouTube.
+                Join Senior Pastor Collins Ababio and the sanctuary worship team live every Sunday at 9:00 AM at Offinso Toll Booth, Kumasi, or stream worldwide on YouTube.
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">

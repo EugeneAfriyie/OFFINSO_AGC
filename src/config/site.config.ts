@@ -12,8 +12,7 @@ export const siteConfig = {
   phone: "+233 55 272 4685",
   email: "thekingstempleag23@gmail.com",
   services: [
-    { name: "1st Sunday Service", time: "9:00 AM – 10:30 AM" },
-    { name: "2nd Sunday Service", time: "11:00 AM – 12:30 PM" },
+    { name: "Sunday Worship Service", time: "9:00 AM – 11:30 AM" },
     { name: "Wednesday Midweek Study", time: "6:30 PM – 8:00 PM" },
   ],
   socials: {

@@ -119,7 +119,7 @@ export const desktopNavLinks: NavLinkItem[] = [
       },
       {
         title: "Live Stream",
-        description: "Join our Sunday live broadcast at 9:00 AM & 11:00 AM GMT.",
+        description: "Join our Sunday live broadcast at 9:00 AM GMT.",
         href: "/media/live",
         icon: Radio,
         badge: "Sunday Live",

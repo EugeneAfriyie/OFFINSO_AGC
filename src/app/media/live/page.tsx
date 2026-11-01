@@ -65,7 +65,7 @@ export default function LiveStreamPage() {
               Sunday Worship Experience
             </h1>
             <p className="text-sm sm:text-base text-slate-600 font-medium max-w-2xl">
-              Join us live every Sunday at 8:30 AM & 10:30 AM. Experience the presence of God from anywhere in the world.
+              Join us live every Sunday at 9:00 AM. Experience the presence of God from anywhere in the world.
             </p>
           </div>
 
@@ -116,7 +116,7 @@ export default function LiveStreamPage() {
                     <MonitorPlay className="w-10 h-10 text-slate-500" />
                   </div>
                   <h3 className="text-2xl font-extrabold text-white mb-2">We are currently offline</h3>
-                  <p className="text-slate-400 mb-8 max-w-md">Our next live broadcast begins on Sunday at 8:30 AM GMT. Check the schedule tab for more upcoming streams.</p>
+                  <p className="text-slate-400 mb-8 max-w-md">Our next live broadcast begins on Sunday at 9:00 AM GMT. Check the schedule tab for more upcoming streams.</p>
                   
                   {/* Countdown Timer (Visual Mock) */}
                   <div className="flex gap-4 sm:gap-6 justify-center">
@@ -275,8 +275,7 @@ export default function LiveStreamPage() {
                 <h3 className="font-extrabold text-slate-900">Upcoming Broadcasts</h3>
                 
                 {[
-                  { title: "Sunday 1st Service", time: "Sunday • 8:30 AM", type: "Worship Service" },
-                  { title: "Sunday 2nd Service", time: "Sunday • 10:30 AM", type: "Worship Service" },
+                  { title: "Sunday Worship Service", time: "Sunday • 9:00 AM", type: "Worship Service" },
                   { title: "Prophetic Prayer Hour", time: "Wednesday • 6:30 PM", type: "Prayer Meeting" },
                   { title: "Bible Study & Discipleship", time: "Friday • 7:00 PM", type: "Teaching" },
                 ].map((event, idx) => (

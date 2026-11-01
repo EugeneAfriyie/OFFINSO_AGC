@@ -75,7 +75,7 @@ const SAMPLE_POSTS = [
     id: 1,
     type: "service",
     time: "2 hours ago",
-    content: "SUNDAY PROPHETIC DECLARATION & REVIVAL SERVICE\n\n\"For I know the plans I have for you,\" declares the LORD — Jeremiah 29:11\n\nJoin Senior Pastor Collins Ababio this Sunday at 9:00 AM & 11:00 AM.",
+    content: "SUNDAY PROPHETIC DECLARATION & REVIVAL SERVICE\n\n\"For I know the plans I have for you,\" declares the LORD — Jeremiah 29:11\n\nJoin Senior Pastor Collins Ababio this Sunday at 9:00 AM.",
     tags: ["#TheKingsTempleAG", "#OffinsoRevival", "#AssembliesOfGod"],
     likes: 428,
     comments: 94,

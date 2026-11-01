@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Clock, Car, Navigation, ArrowRight } from "lucide-react";
+import { siteConfig } from "@/config/site.config";
 
 export function LocationSection() {
   return (
@@ -39,7 +40,7 @@ export function LocationSection() {
                   <MapPin className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <div>
                     <div className="text-xs font-bold text-subtext uppercase">Physical Address</div>
-                    <div className="text-sm font-semibold text-body">123 Faith Avenue, Offinso, Ashanti Region</div>
+                    <div className="text-sm font-semibold text-body">{siteConfig.address}</div>
                   </div>
                 </div>
 
@@ -47,8 +48,8 @@ export function LocationSection() {
                   <Clock className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <div>
                     <div className="text-xs font-bold text-subtext uppercase">Service Schedules</div>
-                    <div className="text-sm font-semibold text-body">Sunday Mornings: 9:00 AM & 11:00 AM</div>
-                    <div className="text-xs text-subtext">Wednesday Bible Study: 7:00 PM</div>
+                    <div className="text-sm font-semibold text-body">Sunday Worship: 9:00 AM – 11:30 AM</div>
+                    <div className="text-xs text-subtext">Wednesday Bible Study: 6:30 PM</div>
                   </div>
                 </div>
 
@@ -56,8 +57,8 @@ export function LocationSection() {
                   <Phone className="w-5 h-5 text-primary-600 mt-1 flex-shrink-0" />
                   <div>
                     <div className="text-xs font-bold text-subtext uppercase">Church Office Hours</div>
-                    <div className="text-sm font-semibold text-body">Monday – Thursday: 9:00 AM – 4:00 PM</div>
-                    <div className="text-xs text-subtext">Phone: (555) 019-2831</div>
+                    <div className="text-sm font-semibold text-body">Tuesday – Friday: 9:00 AM – 4:00 PM</div>
+                    <div className="text-xs text-subtext">Phone: {siteConfig.phone}</div>
                   </div>
                 </div>
 

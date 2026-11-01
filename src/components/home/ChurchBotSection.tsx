@@ -71,7 +71,7 @@ export function ChurchBotSection() {
 
   const initialOptions: StoryOption[] = [
     { label: "Church Location & Address", actionId: "location" },
-    { label: "Sunday Service Schedules", actionId: "services" },
+    { label: "Sunday Service Schedule", actionId: "services" },
     { label: "Pastor Collins Ababio & Leadership", actionId: "pastor" },
     { label: "Kids & Youth Ministry", actionId: "kids" },
     { label: "Tithes & Online Giving", actionId: "giving" },
@@ -138,7 +138,7 @@ export function ChurchBotSection() {
           break;
 
         case "services":
-          botText = `Our Sunday Services: 1st Service is 9:00 AM – 10:30 AM (Vibrant Praise & Teaching), 2nd Service is 11:00 AM – 12:30 PM (Celebration Worship). We also hold Wednesday Midweek Bible Study at 6:30 PM.`;
+          botText = `Our Sunday Worship Service is every Sunday from 9:00 AM – 11:30 AM (Vibrant Praise, Choir Ministry & Biblical Teaching). We also hold Wednesday Midweek Bible Study at 6:30 PM.`;
           nextOptions = [
             { label: "Kids & Youth Ministry", actionId: "kids" },
             { label: "Campus Location & Address", actionId: "location" },
@@ -250,7 +250,7 @@ export function ChurchBotSection() {
       if (lower.includes("location") || lower.includes("where") || lower.includes("address")) {
         responseText = `We are located at ${siteConfig.address}. Reserved guest parking is available near the main entrance!`;
       } else if (lower.includes("time") || lower.includes("sunday") || lower.includes("when")) {
-        responseText = `Sunday Services: 1st Service 9:00 AM – 10:30 AM, 2nd Service 11:00 AM – 12:30 PM. Wednesday Midweek Bible Study is 6:30 PM.`;
+        responseText = `Our Sunday Worship Service is at 9:00 AM – 11:30 AM. Wednesday Midweek Bible Study is 6:30 PM.`;
       }
 
       const botMsg: Message = {

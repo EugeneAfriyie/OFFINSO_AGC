@@ -491,7 +491,7 @@ export default function EventsPage() {
               <div className="space-y-2 text-xs text-slate-700">
                 <p className="font-bold text-slate-900">Main Cathedral Highway</p>
                 <p>Offinso Toll Booth, Kumasi, Ghana</p>
-                <p className="text-slate-500 pt-1">Sunday Services: 9:00 AM & 11:00 AM GMT</p>
+                <p className="text-slate-500 pt-1">Sunday Service: 9:00 AM – 11:30 AM GMT</p>
                 <p className="text-slate-500">Midweek Prayer: Tuesday 5:30 PM GMT</p>
               </div>
             </div>

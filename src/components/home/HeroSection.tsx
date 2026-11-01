@@ -372,12 +372,12 @@ export function HeroSection() {
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                   <span className="font-mono text-[11px] font-bold text-slate-600 uppercase tracking-wider">
-                    SUNDAY SERVICES:
+                    SERVICE SCHEDULE:
                   </span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-900 font-bold">
                   <Clock className="w-3.5 h-3.5 text-primary-600" />
-                  <span>1st: 9:00 AM &bull; 2nd: 11:00 AM &bull; Wed: 6:30 PM</span>
+                  <span>Sunday: 9:00 AM – 11:30 AM &bull; Wed: 6:30 PM</span>
                 </div>
               </div>
 

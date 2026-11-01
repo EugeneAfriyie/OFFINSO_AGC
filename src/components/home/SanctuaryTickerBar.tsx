@@ -6,8 +6,7 @@ import { siteConfig } from "@/config/site.config";
 
 export function SanctuaryTickerBar() {
   const tickerItems = [
-    { label: "SUNDAY 1ST WORSHIP", value: "9:00 AM – 10:30 AM", icon: Clock },
-    { label: "SUNDAY 2ND CELEBRATION", value: "11:00 AM – 12:30 PM", icon: Flame },
+    { label: "SUNDAY WORSHIP CELEBRATION", value: "9:00 AM – 11:30 AM", icon: Clock },
     { label: "WEDNESDAY BIBLE STUDY", value: "6:30 PM – 8:00 PM", icon: BookOpen },
     { label: "CAMPUS LOCATION", value: "Offinso Toll Booth Highway, Kumasi", icon: MapPin },
     { label: "SENIOR PASTOR", value: siteConfig.seniorPastor, icon: Crown },

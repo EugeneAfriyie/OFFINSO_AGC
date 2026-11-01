@@ -104,10 +104,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <span>WELCOME TO WORSHIP</span>
                 </div>
                 <h3 className="text-base sm:text-lg font-extrabold text-white leading-tight">
-                  Sunday Services in Offinso
+                  Sunday Service in Offinso
                 </h3>
                 <p className="text-xs text-slate-200 leading-relaxed font-normal">
-                  Join us at 9:00 AM &bull; 11:00 AM for inspiring worship and biblical truth.
+                  Join us every Sunday at 9:00 AM for inspiring worship and biblical truth.
                 </p>
 
                 <button

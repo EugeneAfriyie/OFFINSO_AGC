@@ -520,7 +520,7 @@ export default function AboutPage() {
         <div className="max-w-[1440px] mx-auto px-4 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
           <div className="space-y-1">
             <h3 className="text-2xl font-extrabold text-white">Ready to Experience Our Service?</h3>
-            <p className="text-xs text-slate-200">Join us this Sunday at 9:00 AM or 11:00 AM at Offinso Toll Booth, Kumasi.</p>
+            <p className="text-xs text-slate-200">Join us this Sunday at 9:00 AM at Offinso Toll Booth, Kumasi.</p>
           </div>
 
           <button

@@ -15,7 +15,7 @@ export function TopBar() {
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>SUNDAY WORSHIP SCHEDULE</span>
           </span>
-          <span className="hidden md:inline font-bold text-white">1st Service: 9:00 AM &bull; 2nd Service: 11:00 AM GMT</span>
+          <span className="hidden md:inline font-bold text-white">Sunday Worship: 9:00 AM – 11:30 AM GMT</span>
         </div>
 
         {/* Quick Contact & Location Info */}

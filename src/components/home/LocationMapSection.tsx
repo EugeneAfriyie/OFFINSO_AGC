@@ -84,7 +84,7 @@ export function LocationMapSection() {
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px] font-bold uppercase">Sunday Worship:</span>
-                    <span className="text-slate-900 font-bold">1st Service: 9:00 AM | 2nd Service: 11:00 AM</span>
+                    <span className="text-slate-900 font-bold">Sunday Service: 9:00 AM – 11:30 AM</span>
                   </div>
                 </div>
               </div>

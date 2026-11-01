@@ -17,7 +17,7 @@ export function FaqSection() {
     {
       id: "faq-2",
       question: "What are your Sunday and Midweek service times?",
-      answer: "We host 1st Sunday Worship from 9:00 AM – 10:30 AM, 2nd Sunday Service from 11:00 AM – 12:30 PM, and Wednesday Midweek Bible Study from 6:30 PM – 8:00 PM.",
+      answer: "Our Sunday Worship Service is held from 9:00 AM – 11:30 AM, and our Wednesday Midweek Bible Study is from 6:30 PM – 8:00 PM.",
     },
     {
       id: "faq-3",

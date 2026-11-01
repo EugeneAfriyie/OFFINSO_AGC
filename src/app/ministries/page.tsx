@@ -43,7 +43,7 @@ export default function MinistriesPage() {
       ministry: "Sanctuary Choir & Music Rehearsal", 
       venue: "Choir Loft & Media Room",
       leader: "Minister Michael Baah",
-      description: "Vocalists, instrumentalists, and broadcast media operators rehearsing anointed praise for Sunday services.",
+      description: "Vocalists, instrumentalists, and broadcast media operators rehearsing anointed praise for Sunday worship.",
       badge: "Worship Practice",
       icon: Music,
     },
@@ -69,11 +69,11 @@ export default function MinistriesPage() {
     },
     { 
       day: "Sunday", 
-      time: "9:00 AM & 11:00 AM", 
+      time: "9:00 AM – 11:30 AM", 
       ministry: "King's Kids Sunday School", 
       venue: "Children's Cathedral Wing",
       leader: "Children's Ministry Team",
-      description: "Safe, fun, and background-checked Sunday school programs for infants up to 12 years old during main Sunday services.",
+      description: "Safe, fun, and background-checked Sunday school programs for infants up to 12 years old during the Sunday worship service.",
       badge: "Children's Church",
       icon: Baby,
     },
@@ -333,7 +333,7 @@ export default function MinistriesPage() {
               <div className="space-y-3 pt-4 border-t border-slate-100">
                 <div className="text-xs text-slate-600 flex items-center gap-2">
                   <Clock className="w-3.5 h-3.5 text-sky-600" />
-                  <span>Sundays 9:00 AM & 11:00 AM</span>
+                  <span>Sundays 9:00 AM – 11:30 AM</span>
                 </div>
 
                 <Link

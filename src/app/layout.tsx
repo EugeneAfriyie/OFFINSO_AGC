@@ -61,7 +61,7 @@ export default function RootLayout({
               },
               "telephone": siteConfig.phone,
               "email": siteConfig.email,
-              "openingHours": "Su 09:00-12:30",
+              "openingHours": "Su 09:00-11:30",
               "url": "https://church-website.com"
             })
           }}

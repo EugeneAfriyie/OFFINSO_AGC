@@ -29,20 +29,20 @@ export function ServiceQuickBar() {
             <div className="w-12 h-12 rounded-xl bg-primary-50 text-primary-600 flex items-center justify-center mb-4 group-hover:bg-primary-600 group-hover:text-white transition-colors">
               <Clock className="w-6 h-6" />
             </div>
-            <h3 className="text-lg font-bold text-body mb-2">Worship Services</h3>
+            <h3 className="text-lg font-bold text-body mb-2">Worship Schedule</h3>
             <div className="space-y-1.5 text-sm text-subtext">
               <p className="flex justify-between">
-                <span className="font-semibold text-body">Sunday Mornings:</span>
-                <span className="font-bold text-primary-600">9:00 AM & 11:00 AM</span>
+                <span className="font-semibold text-body">Sunday Service:</span>
+                <span className="font-bold text-primary-600">9:00 AM – 11:30 AM</span>
               </p>
               <p className="flex justify-between">
                 <span className="font-semibold text-body">Midweek Bible Study:</span>
-                <span>Wed 7:00 PM</span>
+                <span>Wed 6:30 PM</span>
               </p>
             </div>
           </div>
           <div className="mt-4 pt-3 border-t border-borderline text-xs font-semibold text-primary-600 flex items-center gap-1">
-            <span>Kids & Youth programs active during all services</span>
+            <span>King's Kids programs active during Sunday service</span>
           </div>
         </div>
 

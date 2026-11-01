@@ -186,7 +186,7 @@ export default function ContactPage() {
 
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-2">
                   <Clock className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                  <span className="text-[11px] font-bold text-slate-200 truncate">Sun 9:00 & 11:00 AM</span>
+                  <span className="text-[11px] font-bold text-slate-200 truncate">Sun 9:00 AM</span>
                 </div>
 
                 <div className="p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center gap-2">

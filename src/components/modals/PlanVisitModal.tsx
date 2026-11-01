@@ -116,14 +116,13 @@ export function PlanVisitModal() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-bold text-body uppercase mb-1">Preferred Service</label>
+                  <label className="block text-xs font-bold text-body uppercase mb-1">Service Time</label>
                   <select
                     value={formData.service}
                     onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-borderline text-sm text-body focus:border-primary-500 focus:ring-2 focus:ring-primary-100 outline-none bg-white"
                   >
-                    <option value="9:00 AM">Sunday 9:00 AM</option>
-                    <option value="11:00 AM">Sunday 11:00 AM</option>
+                    <option value="9:00 AM">Sunday Worship (9:00 AM)</option>
                   </select>
                 </div>
 
